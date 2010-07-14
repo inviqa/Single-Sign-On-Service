@@ -1,0 +1,155 @@
+# extended LDIF
+#
+# LDAPv3
+# base <ou=Users,ou=SSO,dc=sso> with scope subtree
+# filter: (objectclass=*)
+# requesting: ALL
+#
+
+# THUS SOUTHEND, Users, SSO, sso
+dn: sso=THUS SOUTHEND,ou=Users,ou=SSO,dc=sso
+objectClass: ssoOrganisation
+sso: THUS SOUTHEND
+ssoRole: sso=mycw_admin,ou=Permissions,ou=SSO,dc=sso
+
+# simon.sexton@southend, THUS SOUTHEND, Users, SSO, sso
+dn: sso=simon.sexton@southend,sso=THUS SOUTHEND,ou=Users,ou=SSO,dc=sso
+objectClass: ssoUser
+ssoUsername: simon.sexton@southend
+ssoPassword: 6dd83eb67b87ef59a3be258c7d9aff22
+ssoCreated: 1258732247
+sso: simon.sexton@southend
+
+# organisation, simon.sexton@southend, THUS SOUTHEND, Users, SSO, sso
+dn: sso=organisation,sso=simon.sexton@southend,sso=THUS SOUTHEND,ou=Users,ou=S
+ SO,dc=sso
+objectClass: ssoAttribute
+ssoValue: THUS SOUTHEND
+sso: organisation
+
+# fullName, simon.sexton@southend, THUS SOUTHEND, Users, SSO, sso
+dn: sso=fullName,sso=simon.sexton@southend,sso=THUS SOUTHEND,ou=Users,ou=SSO,d
+ c=sso
+objectClass: ssoAttribute
+ssoValue: Simon Sexton
+sso: fullName
+
+# emailAddress, simon.sexton@southend, THUS SOUTHEND, Users, SSO, sso
+dn: sso=emailAddress,sso=simon.sexton@southend,sso=THUS SOUTHEND,ou=Users,ou=S
+ SO,dc=sso
+objectClass: ssoAttribute
+ssoValue: simon.sexton@cw.com
+sso: emailAddress
+
+# phoneNumber, simon.sexton@southend, THUS SOUTHEND, Users, SSO, sso
+dn: sso=phoneNumber,sso=simon.sexton@southend,sso=THUS SOUTHEND,ou=Users,ou=SS
+ O,dc=sso
+objectClass: ssoAttribute
+ssoValue: 07776 151475
+sso: phoneNumber
+
+# location, simon.sexton@southend, THUS SOUTHEND, Users, SSO, sso
+dn: sso=location,sso=simon.sexton@southend,sso=THUS SOUTHEND,ou=Users,ou=SSO,d
+ c=sso
+objectClass: ssoAttribute
+ssoValue: Southend
+sso: location
+
+# Adept, Users, SSO, sso
+dn: sso=Adept,ou=Users,ou=SSO,dc=sso
+objectClass: ssoOrganisation
+sso: Adept
+ssoRole: sso=mycw_admin,ou=Permissions,ou=SSO,dc=sso
+
+# matthew.oddie@adept, Adept, Users, SSO, sso
+dn: sso=matthew.oddie@adept,sso=Adept,ou=Users,ou=SSO,dc=sso
+objectClass: ssoUser
+ssoUsername: matthew.oddie@adept
+ssoPassword: 5f4dcc3b5aa765d61d8327deb882cf99
+ssoCreated: 1259578258
+sso: matthew.oddie@adept
+
+# organisation, matthew.oddie@adept, Adept, Users, SSO, sso
+dn: sso=organisation,sso=matthew.oddie@adept,sso=Adept,ou=Users,ou=SSO,dc=sso
+objectClass: ssoAttribute
+ssoValue: Adept
+sso: organisation
+
+# fullName, matthew.oddie@adept, Adept, Users, SSO, sso
+dn: sso=fullName,sso=matthew.oddie@adept,sso=Adept,ou=Users,ou=SSO,dc=sso
+objectClass: ssoAttribute
+ssoValue: Matthew Oddie
+sso: fullName
+
+# emailAddress, matthew.oddie@adept, Adept, Users, SSO, sso
+dn: sso=emailAddress,sso=matthew.oddie@adept,sso=Adept,ou=Users,ou=SSO,dc=sso
+objectClass: ssoAttribute
+ssoValue: matthew.oddie@cw.com
+sso: emailAddress
+
+# phoneNumber, matthew.oddie@adept, Adept, Users, SSO, sso
+dn: sso=phoneNumber,sso=matthew.oddie@adept,sso=Adept,ou=Users,ou=SSO,dc=sso
+objectClass: ssoAttribute
+ssoValue: 07795 335889
+sso: phoneNumber
+
+# location, matthew.oddie@adept, Adept, Users, SSO, sso
+dn: sso=location,sso=matthew.oddie@adept,sso=Adept,ou=Users,ou=SSO,dc=sso
+objectClass: ssoAttribute
+ssoValue: Southend
+sso: location
+
+# description, Adept, Users, SSO, sso
+dn: sso=description,sso=Adept,ou=Users,ou=SSO,dc=sso
+objectClass: ssoAttribute
+ssoValue: Adept
+sso: description
+
+# defaultremedyqueue, Adept, Users, SSO, sso
+dn: sso=defaultremedyqueue,sso=Adept,ou=Users,ou=SSO,dc=sso
+objectClass: ssoAttribute
+ssoValue: CSC: ATLAS PORTAL
+sso: defaultremedyqueue
+
+# pid, Adept, Users, SSO, sso
+dn: sso=pid,sso=Adept,ou=Users,ou=SSO,dc=sso
+objectClass: ssoAttribute
+ssoValue: 719220
+sso: pid
+
+# remedyId, Adept, Users, SSO, sso
+dn: sso=remedyId,sso=Adept,ou=Users,ou=SSO,dc=sso
+objectClass: ssoAttribute
+ssoValue: COMP00000020257
+sso: remedyId
+
+# description, THUS SOUTHEND, Users, SSO, sso
+dn: sso=description,sso=THUS SOUTHEND,ou=Users,ou=SSO,dc=sso
+objectClass: ssoAttribute
+ssoValue: THUS SOUTHEND
+sso: description
+
+# defaultremedyqueue, THUS SOUTHEND, Users, SSO, sso
+dn: sso=defaultremedyqueue,sso=THUS SOUTHEND,ou=Users,ou=SSO,dc=sso
+objectClass: ssoAttribute
+ssoValue: CSC: ATLAS PORTAL
+sso: defaultremedyqueue
+
+# pid, THUS SOUTHEND, Users, SSO, sso
+dn: sso=pid,sso=THUS SOUTHEND,ou=Users,ou=SSO,dc=sso
+objectClass: ssoAttribute
+ssoValue: 752389
+sso: pid
+
+# remedyId, THUS SOUTHEND, Users, SSO, sso
+dn: sso=remedyId,sso=THUS SOUTHEND,ou=Users,ou=SSO,dc=sso
+objectClass: ssoAttribute
+ssoValue: COMP00000038830
+sso: remedyId
+
+# search result
+search: 2
+result: 0 Success
+
+# numResponses: 26
+# numEntries: 25

@@ -1,0 +1,6 @@
+version: 1
+
+dn: sso=salesforce,sso=portal,sso=mycw,ou=Resources,ou=SSO,dc=sso
+objectClass: ssoResource
+sso: salesforce
+

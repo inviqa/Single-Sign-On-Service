@@ -1,0 +1,27 @@
+# extended LDIF
+#
+# LDAPv3
+# base <ou=Users,ou=SSO,dc=sso> with scope subtree
+# filter: (objectclass=*)
+# requesting: ALL
+#
+
+# CW, Users, SSO, sso
+dn: sso=CW,ou=Users,ou=SSO,dc=sso
+sso: CW
+objectClass: ssoOrganisation
+
+# admin@cw, CW, Users, SSO, sso
+dn: sso=admin@cw,sso=CW,ou=Users,ou=SSO,dc=sso
+objectClass: ssoUser
+ssoUsername: admin@cw
+ssoPassword: 5f4dcc3b5aa765d61d8327deb882cf99
+ssoCreated: 1250665314
+sso: admin@cw
+
+# search result
+search: 2
+result: 0 Success
+
+# numResponses: 26
+# numEntries: 25

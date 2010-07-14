@@ -1,0 +1,207 @@
+objectidentifier ssoSchema 1.3.6.1.4.1.2.33928
+objectidentifier ssoSyn ssoSchema:1 
+objectidentifier ssoMat ssoSchema:2 
+objectidentifier ssoAtt ssoSchema:3 
+objectidentifier ssoObj ssoSchema:4 
+objectidentifier ssoFea ssoSchema:5 
+objectidentifier ssoPro ssoSchema:9
+objectidentifier ssoCon ssoSchema:10
+objectidentifier ssoExt ssoSchema:11
+
+attributetype
+ (
+	ssoAtt:1
+	NAME ( 'sso' 'ssoName' )
+	DESC 'Name of an SSO entity'
+	SUP name
+ ) 
+
+attributetype
+ (
+	ssoAtt:2
+	NAME 'ssoDescription'
+	DESC 'Description of an SSO entity'
+	EQUALITY caseIgnoreMatch
+	SUBSTR caseIgnoreSubstringsMatch
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{1024}
+ )  
+
+objectclass 
+ (
+	ssoObj:1
+	NAME 'ssoBase'
+	DESC 'Base SSO class'
+	SUP top
+	STRUCTURAL
+	MUST(ssoName)
+	MAY(ssoDescription)
+ )
+
+attributetype
+ (
+	ssoAtt:4
+	NAME 'ssoValue'
+	DESC 'Value of an ssoAttribute'
+	EQUALITY caseIgnoreMatch
+	SUBSTR caseIgnoreSubstringsMatch
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{1024}
+ )
+
+objectclass 
+ (
+	ssoObj:2
+	NAME 'ssoAttribute'
+	DESC 'ssoAttribute'
+	SUP ssoBase
+	STRUCTURAL
+	MUST(ssoValue)
+ )
+
+attributetype
+ (
+	ssoAtt:6
+	NAME 'ssoPolicy'
+	DESC 'Contains a DN to an ssoPolicy'
+	EQUALITY distinguishedNameMatch
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.12{1024}
+ )
+
+attributetype
+ (
+	ssoAtt:7
+	NAME 'ssoRole'
+	DESC 'Contains a DN to an ssoRole'
+	EQUALITY distinguishedNameMatch
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.12{1024}
+ )
+
+objectclass 
+ (
+	ssoObj:4
+	NAME 'ssoOrganisation'
+	DESC 'ssoOrganisation'
+	SUP ssoBase
+	STRUCTURAL
+	MAY(ssoRole $ ssoPolicy)
+ )
+
+attributetype
+ (
+	ssoAtt:8
+	NAME ('ssoUsername' 'ssoid')
+	DESC 'SSO Username'
+	SUP ssoName
+ ) 
+
+attributetype
+ (
+	ssoAtt:9
+	NAME 'ssoPassword'
+	DESC 'ssoPassword'
+	SUP userPassword
+ )
+
+attributetype
+ (
+	ssoAtt:14
+	NAME 'ssoCreated'
+	DESC 'Contains the created datetime for this record.'
+	EQUALITY integerMatch
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.27{8}
+ )
+
+objectclass 
+ (
+	ssoObj:5
+	NAME 'ssoUser'
+	DESC 'ssoUser'
+	SUP ssoBase
+	STRUCTURAL
+	MUST(ssoUsername $ ssoPassword $ ssoCreated)
+	MAY(ssoRole)
+ )
+
+objectclass 
+ (
+	ssoObj:6
+	NAME 'ssoRole'
+	DESC 'ssoRole'
+	SUP ssoBase
+	STRUCTURAL
+ )
+
+objectclass 
+ (
+	ssoObj:7
+	NAME 'ssoResource'
+	DESC 'ssoResource'
+	SUP ssoBase
+	STRUCTURAL
+ )
+
+attributetype
+ (
+	ssoAtt:10
+	NAME 'ssoResource'
+	DESC 'Contains a DN to an ssoResource'
+	EQUALITY distinguishedNameMatch
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.12{1024}
+ )
+
+attributetype
+ (
+	ssoAtt:15
+	NAME 'ssoGrant'
+	DESC 'whether this right adds permissions'
+	EQUALITY caseIgnoreMatch
+	SUBSTR caseIgnoreSubstringsMatch
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{1024}
+ )  
+
+objectclass 
+ (
+	ssoObj:8
+	NAME 'ssoRight'
+	DESC 'ssoRight'
+	SUP ssoBase
+	STRUCTURAL
+	MUST (ssoResource $ ssoGrant)
+ )
+
+objectclass 
+ (
+	ssoObj:9
+	NAME 'ssoPolicy'
+	DESC 'ssoPolicy'
+	SUP ssoBase
+	STRUCTURAL
+ )
+
+attributetype
+ (
+	ssoAtt:11
+	NAME 'ssoUser'
+	DESC 'Contains a DN to an ssoUser'
+	EQUALITY distinguishedNameMatch
+ 	SYNTAX 1.3.6.1.4.1.1466.115.121.1.12{1024}
+ )
+
+attributetype
+ (
+	ssoAtt:12
+	NAME 'ssoTimestamp'
+	DESC 'Contains the last access for this token.'
+	EQUALITY integerMatch
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.27{8}
+ )
+
+objectclass 
+ (
+	ssoObj:10
+	NAME 'ssoToken'
+	DESC 'ssoToken'
+	SUP ssoBase
+	STRUCTURAL
+	MUST (ssoUser $ ssoTimestamp)
+ )
+

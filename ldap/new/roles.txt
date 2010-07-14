@@ -1,0 +1,727 @@
+# extended LDIF
+#
+# LDAPv3
+# base <ou=Permissions,ou=SSO,dc=sso> with scope subtree
+# filter: (objectclass=*)
+# requesting: ALL
+#
+
+# Permissions, SSO, sso
+dn: ou=Permissions,ou=SSO,dc=sso
+ou: Permissions
+objectClass: organizationalUnit
+
+# MyCW, Permissions, SSO, sso
+dn: sso=MyCW,ou=Permissions,ou=SSO,dc=sso
+objectClass: ssoRole
+sso: MyCW
+
+# Admin, MyCW, Permissions, SSO, sso
+dn: sso=Admin,sso=MyCW,ou=Permissions,ou=SSO,dc=sso
+objectClass: ssoRole
+sso: Admin
+
+# User, MyCW, Permissions, SSO, sso
+dn: sso=User,sso=MyCW,ou=Permissions,ou=SSO,dc=sso
+objectClass: ssoRole
+sso: User
+
+# Generic, Admin, MyCW, Permissions, SSO, sso
+dn: sso=Generic,sso=Admin,sso=MyCW,ou=Permissions,ou=SSO,dc=sso
+objectClass: ssoRole
+sso: Generic
+
+# description, Generic, Admin, MyCW, Permissions, SSO, sso
+dn: sso=description,sso=Generic,sso=Admin,sso=MyCW,ou=Permissions,ou=SSO,dc=ss
+ o
+objectClass: ssoAttribute
+ssoValue: Generic Admin user roles
+sso: description
+
+# Wholesale, Generic, Admin, MyCW, Permissions, SSO, sso
+dn: sso=Wholesale,sso=Generic,sso=Admin,sso=MyCW,ou=Permissions,ou=SSO,dc=sso
+objectClass: ssoRole
+sso: Wholesale
+
+# description, Wholesale, Generic, Admin, MyCW, Permissions, SSO, sso
+dn: sso=description,sso=Wholesale,sso=Generic,sso=Admin,sso=MyCW,ou=Permission
+ s,ou=SSO,dc=sso
+objectClass: ssoAttribute
+ssoValue:: V2hvbGVzYWxlIHByb2R1Y3Qgc3BlY2lmaWMgQWRtaW4gdXNlciByb2xlcyA=
+sso: description
+
+# SaaS, Wholesale, Generic, Admin, MyCW, Permissions, SSO, sso
+dn: sso=SaaS,sso=Wholesale,sso=Generic,sso=Admin,sso=MyCW,ou=Permissions,ou=SS
+ O,dc=sso
+objectClass: ssoRole
+sso: SaaS
+
+# fae3d0, SaaS, Wholesale, Generic, Admin, MyCW, Permissions, SSO, sso
+dn: sso=fae3d0,sso=SaaS,sso=Wholesale,sso=Generic,sso=Admin,sso=MyCW,ou=Permis
+ sions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=saas,sso=admin,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: update
+ssoGrant: true
+sso: fae3d0
+
+# parent, SaaS, Wholesale, Generic, Admin, MyCW, Permissions, SSO, sso
+dn: sso=parent,sso=SaaS,sso=Wholesale,sso=Generic,sso=Admin,sso=MyCW,ou=Permis
+ sions,ou=SSO,dc=sso
+objectClass: ssoAttribute
+ssoValue: Wholesale:Generic:Admin:MyCW
+sso: parent
+
+# description, SaaS, Wholesale, Generic, Admin, MyCW, Permissions, SSO, sso
+dn: sso=description,sso=SaaS,sso=Wholesale,sso=Generic,sso=Admin,sso=MyCW,ou=P
+ ermissions,ou=SSO,dc=sso
+objectClass: ssoAttribute
+ssoValue: Users that will need to manage SaaS products, view billing informati
+ on and create reports
+sso: description
+
+# ccb65e, SaaS, Wholesale, Generic, Admin, MyCW, Permissions, SSO, sso
+dn: sso=ccb65e,sso=SaaS,sso=Wholesale,sso=Generic,sso=Admin,sso=MyCW,ou=Permis
+ sions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=saas,sso=admin,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: delete
+ssoGrant: true
+sso: ccb65e
+
+# b3a8d0, SaaS, Wholesale, Generic, Admin, MyCW, Permissions, SSO, sso
+dn: sso=b3a8d0,sso=SaaS,sso=Wholesale,sso=Generic,sso=Admin,sso=MyCW,ou=Permis
+ sions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=saas,sso=admin,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: create
+ssoGrant: true
+sso: b3a8d0
+
+# bde59d, SaaS, Wholesale, Generic, Admin, MyCW, Permissions, SSO, sso
+dn: sso=bde59d,sso=SaaS,sso=Wholesale,sso=Generic,sso=Admin,sso=MyCW,ou=Permis
+ sions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=saas,sso=admin,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: read
+ssoGrant: true
+sso: bde59d
+
+# description, User, MyCW, Permissions, SSO, sso
+dn: sso=description,sso=User,sso=MyCW,ou=Permissions,ou=SSO,dc=sso
+objectClass: ssoAttribute
+ssoValue: A standard user of the MyCW Portal
+sso: description
+
+# Company Specific, User, MyCW, Permissions, SSO, sso
+dn: sso=Company Specific,sso=User,sso=MyCW,ou=Permissions,ou=SSO,dc=sso
+objectClass: ssoRole
+sso: Company Specific
+
+# description, Company Specific, User, MyCW, Permissions, SSO, sso
+dn: sso=description,sso=Company Specific,sso=User,sso=MyCW,ou=Permissions,ou=S
+ SO,dc=sso
+objectClass: ssoAttribute
+ssoValue: For users that do not fit into any of the roles underneath the "Gene
+ ric" role, due to companies having specific requirements
+sso: description
+
+# THUS, Company Specific, User, MyCW, Permissions, SSO, sso
+dn: sso=THUS,sso=Company Specific,sso=User,sso=MyCW,ou=Permissions,ou=SSO,dc=s
+ so
+objectClass: ssoRole
+sso: THUS
+
+# description, THUS, Company Specific, User, MyCW, Permissions, SSO, sso
+dn: sso=description,sso=THUS,sso=Company Specific,sso=User,sso=MyCW,ou=Permiss
+ ions,ou=SSO,dc=sso
+objectClass: ssoAttribute
+ssoValue:: U3BlY2lmaWMgcm9sZXMgZm9yIHVzZXJzIGZyb20gVEhVUyA=
+sso: description
+
+# Assurer, THUS, Company Specific, User, MyCW, Permissions, SSO, sso
+dn: sso=Assurer,sso=THUS,sso=Company Specific,sso=User,sso=MyCW,ou=Permissions
+ ,ou=SSO,dc=sso
+objectClass: ssoRole
+sso: Assurer
+
+# description, Assurer, THUS, Company Specific, User, MyCW, Permissions, SSO,
+  sso
+dn: sso=description,sso=Assurer,sso=THUS,sso=Company Specific,sso=User,sso=MyC
+ W,ou=Permissions,ou=SSO,dc=sso
+objectClass: ssoAttribute
+sso: description
+ssoValue: A user from THUS that raises incidents
+
+# 9c0eef, Assurer, THUS, Company Specific, User, MyCW, Permissions, SSO, sso
+dn: sso=9c0eef,sso=Assurer,sso=THUS,sso=Company Specific,sso=User,sso=MyCW,ou=
+ Permissions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=incident,sso=enterprise,sso=portal,sso=mycw,ou=Resources,ou=S
+ SO
+ssoDescription: create
+ssoGrant: true
+sso: 9c0eef
+
+# Generic, User, MyCW, Permissions, SSO, sso
+dn: sso=Generic,sso=User,sso=MyCW,ou=Permissions,ou=SSO,dc=sso
+objectClass: ssoRole
+sso: Generic
+
+# description, Generic, User, MyCW, Permissions, SSO, sso
+dn: sso=description,sso=Generic,sso=User,sso=MyCW,ou=Permissions,ou=SSO,dc=sso
+objectClass: ssoAttribute
+ssoValue: Generic standard user roles
+sso: description
+
+# Enterprise, Generic, User, MyCW, Permissions, SSO, sso
+dn: sso=Enterprise,sso=Generic,sso=User,sso=MyCW,ou=Permissions,ou=SSO,dc=sso
+objectClass: ssoRole
+sso: Enterprise
+
+# description, Enterprise, Generic, User, MyCW, Permissions, SSO, sso
+dn: sso=description,sso=Enterprise,sso=Generic,sso=User,sso=MyCW,ou=Permission
+ s,ou=SSO,dc=sso
+objectClass: ssoAttribute
+ssoValue: Enterprise user roles
+sso: description
+
+# TOP, Generic, User, MyCW, Permissions, SSO, sso
+dn: sso=TOP,sso=Generic,sso=User,sso=MyCW,ou=Permissions,ou=SSO,dc=sso
+objectClass: ssoRole
+sso: TOP
+
+# description, TOP, Generic, User, MyCW, Permissions, SSO, sso
+dn: sso=description,sso=TOP,sso=Generic,sso=User,sso=MyCW,ou=Permissions,ou=SS
+ O,dc=sso
+objectClass: ssoAttribute
+sso: description
+ssoValue: A user of of the Tool for Online Pricing
+
+# parent, TOP, Generic, User, MyCW, Permissions, SSO, sso
+dn: sso=parent,sso=TOP,sso=Generic,sso=User,sso=MyCW,ou=Permissions,ou=SSO,dc=
+ sso
+objectClass: ssoAttribute
+ssoValue: Generic:User:MyCW
+sso: parent
+
+# 72c58e, TOP, Generic, User, MyCW, Permissions, SSO, sso
+dn: sso=72c58e,sso=TOP,sso=Generic,sso=User,sso=MyCW,ou=Permissions,ou=SSO,dc=
+ sso
+objectClass: ssoRight
+ssoResource: sso=top,sso=services,sso=external,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: read
+ssoGrant: true
+sso: 72c58e
+
+# 41e5ec, TOP, Generic, User, MyCW, Permissions, SSO, sso
+dn: sso=41e5ec,sso=TOP,sso=Generic,sso=User,sso=MyCW,ou=Permissions,ou=SSO,dc=
+ sso
+objectClass: ssoRight
+ssoResource: sso=topcw,sso=services,sso=external,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: read
+ssoGrant: true
+sso: 41e5ec
+
+# Wholesale, Generic, User, MyCW, Permissions, SSO, sso
+dn: sso=Wholesale,sso=Generic,sso=User,sso=MyCW,ou=Permissions,ou=SSO,dc=sso
+objectClass: ssoRole
+sso: Wholesale
+
+# description, Wholesale, Generic, User, MyCW, Permissions, SSO, sso
+dn: sso=description,sso=Wholesale,sso=Generic,sso=User,sso=MyCW,ou=Permissions
+ ,ou=SSO,dc=sso
+objectClass: ssoAttribute
+ssoValue:: V2hvbGVzYWxlIHByb2R1Y3Qgc3BlY2lmaWMgc3RhbmRhcmQgdXNlciByb2xlcyA=
+sso: description
+
+# AD, Wholesale, Generic, User, MyCW, Permissions, SSO, sso
+dn: sso=AD,sso=Wholesale,sso=Generic,sso=User,sso=MyCW,ou=Permissions,ou=SSO,d
+ c=sso
+objectClass: ssoRole
+sso: AD
+
+# DIA, Wholesale, Generic, User, MyCW, Permissions, SSO, sso
+dn: sso=DIA,sso=Wholesale,sso=Generic,sso=User,sso=MyCW,ou=Permissions,ou=SSO,
+ dc=sso
+objectClass: ssoRole
+sso: DIA
+
+# IPVPN, Wholesale, Generic, User, MyCW, Permissions, SSO, sso
+dn: sso=IPVPN,sso=Wholesale,sso=Generic,sso=User,sso=MyCW,ou=Permissions,ou=SS
+ O,dc=sso
+objectClass: ssoRole
+sso: IPVPN
+
+# SaaS, Wholesale, Generic, User, MyCW, Permissions, SSO, sso
+dn: sso=SaaS,sso=Wholesale,sso=Generic,sso=User,sso=MyCW,ou=Permissions,ou=SSO
+ ,dc=sso
+objectClass: ssoRole
+sso: SaaS
+
+# 8a027b, AD, Wholesale, Generic, User, MyCW, Permissions, SSO, sso
+dn: sso=8a027b,sso=AD,sso=Wholesale,sso=Generic,sso=User,sso=MyCW,ou=Permissio
+ ns,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=mystats,sso=services,sso=external,sso=mycw,ou=Resources,ou=SS
+ O
+ssoDescription: read
+ssoGrant: true
+sso: 8a027b
+
+# 3d092f, AD, Wholesale, Generic, User, MyCW, Permissions, SSO, sso
+dn: sso=3d092f,sso=AD,sso=Wholesale,sso=Generic,sso=User,sso=MyCW,ou=Permissio
+ ns,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=srua,sso=services,sso=external,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: read
+ssoGrant: true
+sso: 3d092f
+
+# parent, AD, Wholesale, Generic, User, MyCW, Permissions, SSO, sso
+dn: sso=parent,sso=AD,sso=Wholesale,sso=Generic,sso=User,sso=MyCW,ou=Permissio
+ ns,ou=SSO,dc=sso
+objectClass: ssoAttribute
+ssoValue: Wholesale:Generic:User:MyCW
+sso: parent
+
+# description, AD, Wholesale, Generic, User, MyCW, Permissions, SSO, sso
+dn: sso=description,sso=AD,sso=Wholesale,sso=Generic,sso=User,sso=MyCW,ou=Perm
+ issions,ou=SSO,dc=sso
+objectClass: ssoAttribute
+ssoValue: A Wholesale Access Delivery user
+sso: description
+
+# 7b08d8, AD, Wholesale, Generic, User, MyCW, Permissions, SSO, sso
+dn: sso=7b08d8,sso=AD,sso=Wholesale,sso=Generic,sso=User,sso=MyCW,ou=Permissio
+ ns,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=wad,sso=reseller,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: read
+ssoGrant: true
+sso: 7b08d8
+
+# 28e500, AD, Wholesale, Generic, User, MyCW, Permissions, SSO, sso
+dn: sso=28e500,sso=AD,sso=Wholesale,sso=Generic,sso=User,sso=MyCW,ou=Permissio
+ ns,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=4sure,sso=services,sso=external,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: read
+ssoGrant: true
+sso: 28e500
+
+# a2a66d, AD, Wholesale, Generic, User, MyCW, Permissions, SSO, sso
+dn: sso=a2a66d,sso=AD,sso=Wholesale,sso=Generic,sso=User,sso=MyCW,ou=Permissio
+ ns,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=ebilling,sso=services,sso=external,sso=mycw,ou=Resources,ou=S
+ SO
+ssoDescription: read
+ssoGrant: true
+sso: a2a66d
+
+# 824d27, AD, Wholesale, Generic, User, MyCW, Permissions, SSO, sso
+dn: sso=824d27,sso=AD,sso=Wholesale,sso=Generic,sso=User,sso=MyCW,ou=Permissio
+ ns,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=salesforce,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: read
+ssoGrant: true
+sso: 824d27
+
+# description, DIA, Wholesale, Generic, User, MyCW, Permissions, SSO, sso
+dn: sso=description,sso=DIA,sso=Wholesale,sso=Generic,sso=User,sso=MyCW,ou=Per
+ missions,ou=SSO,dc=sso
+objectClass: ssoAttribute
+sso: description
+ssoValue: A Wholesale Direct Internet Access user
+
+# a2a66d, DIA, Wholesale, Generic, User, MyCW, Permissions, SSO, sso
+dn: sso=a2a66d,sso=DIA,sso=Wholesale,sso=Generic,sso=User,sso=MyCW,ou=Permissi
+ ons,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=ebilling,sso=services,sso=external,sso=mycw,ou=Resources,ou=S
+ SO
+ssoDescription: read
+ssoGrant: true
+sso: a2a66d
+
+# parent, DIA, Wholesale, Generic, User, MyCW, Permissions, SSO, sso
+dn: sso=parent,sso=DIA,sso=Wholesale,sso=Generic,sso=User,sso=MyCW,ou=Permissi
+ ons,ou=SSO,dc=sso
+objectClass: ssoAttribute
+ssoValue: Wholesale:Generic:User:MyCW
+sso: parent
+
+# 824d27, DIA, Wholesale, Generic, User, MyCW, Permissions, SSO, sso
+dn: sso=824d27,sso=DIA,sso=Wholesale,sso=Generic,sso=User,sso=MyCW,ou=Permissi
+ ons,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=salesforce,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: read
+ssoGrant: true
+sso: 824d27
+
+# 28e500, DIA, Wholesale, Generic, User, MyCW, Permissions, SSO, sso
+dn: sso=28e500,sso=DIA,sso=Wholesale,sso=Generic,sso=User,sso=MyCW,ou=Permissi
+ ons,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=4sure,sso=services,sso=external,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: read
+ssoGrant: true
+sso: 28e500
+
+# 376df1, DIA, Wholesale, Generic, User, MyCW, Permissions, SSO, sso
+dn: sso=376df1,sso=DIA,sso=Wholesale,sso=Generic,sso=User,sso=MyCW,ou=Permissi
+ ons,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=incident,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: read
+ssoGrant: true
+sso: 376df1
+
+# 3cbb19, DIA, Wholesale, Generic, User, MyCW, Permissions, SSO, sso
+dn: sso=3cbb19,sso=DIA,sso=Wholesale,sso=Generic,sso=User,sso=MyCW,ou=Permissi
+ ons,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=dia,sso=reseller,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: read
+ssoGrant: true
+sso: 3cbb19
+
+# 55c6ff, SaaS, Wholesale, Generic, User, MyCW, Permissions, SSO, sso
+dn: sso=55c6ff,sso=SaaS,sso=Wholesale,sso=Generic,sso=User,sso=MyCW,ou=Permiss
+ ions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=incident,sso=saas,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: read
+ssoGrant: true
+sso: 55c6ff
+
+# 05083d, SaaS, Wholesale, Generic, User, MyCW, Permissions, SSO, sso
+dn: sso=05083d,sso=SaaS,sso=Wholesale,sso=Generic,sso=User,sso=MyCW,ou=Permiss
+ ions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=incident,sso=saas,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: update
+ssoGrant: true
+sso: 05083d
+
+# bb1284, SaaS, Wholesale, Generic, User, MyCW, Permissions, SSO, sso
+dn: sso=bb1284,sso=SaaS,sso=Wholesale,sso=Generic,sso=User,sso=MyCW,ou=Permiss
+ ions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=incident,sso=saas,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: create
+ssoGrant: true
+sso: bb1284
+
+# parent, SaaS, Wholesale, Generic, User, MyCW, Permissions, SSO, sso
+dn: sso=parent,sso=SaaS,sso=Wholesale,sso=Generic,sso=User,sso=MyCW,ou=Permiss
+ ions,ou=SSO,dc=sso
+objectClass: ssoAttribute
+ssoValue: Wholesale:Generic:User:MyCW
+sso: parent
+
+# description, SaaS, Wholesale, Generic, User, MyCW, Permissions, SSO, sso
+dn: sso=description,sso=SaaS,sso=Wholesale,sso=Generic,sso=User,sso=MyCW,ou=Pe
+ rmissions,ou=SSO,dc=sso
+objectClass: ssoAttribute
+ssoValue: A SaaS user
+sso: description
+
+# c075f4, SaaS, Wholesale, Generic, User, MyCW, Permissions, SSO, sso
+dn: sso=c075f4,sso=SaaS,sso=Wholesale,sso=Generic,sso=User,sso=MyCW,ou=Permiss
+ ions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=incident,sso=saas,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: delete
+ssoGrant: true
+sso: c075f4
+
+# 7859e6, SaaS, Wholesale, Generic, User, MyCW, Permissions, SSO, sso
+dn: sso=7859e6,sso=SaaS,sso=Wholesale,sso=Generic,sso=User,sso=MyCW,ou=Permiss
+ ions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=order,sso=saas,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: update
+ssoGrant: true
+sso: 7859e6
+
+# 211eb7, SaaS, Wholesale, Generic, User, MyCW, Permissions, SSO, sso
+dn: sso=211eb7,sso=SaaS,sso=Wholesale,sso=Generic,sso=User,sso=MyCW,ou=Permiss
+ ions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=order,sso=saas,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: create
+ssoGrant: true
+sso: 211eb7
+
+# be5078, SaaS, Wholesale, Generic, User, MyCW, Permissions, SSO, sso
+dn: sso=be5078,sso=SaaS,sso=Wholesale,sso=Generic,sso=User,sso=MyCW,ou=Permiss
+ ions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=order,sso=saas,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: delete
+ssoGrant: true
+sso: be5078
+
+# 181040, SaaS, Wholesale, Generic, User, MyCW, Permissions, SSO, sso
+dn: sso=181040,sso=SaaS,sso=Wholesale,sso=Generic,sso=User,sso=MyCW,ou=Permiss
+ ions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=order,sso=saas,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: read
+ssoGrant: true
+sso: 181040
+
+# description, MyCW, Permissions, SSO, sso
+dn: sso=description,sso=MyCW,ou=Permissions,ou=SSO,dc=sso
+objectClass: ssoAttribute
+ssoValue: A user that will need to sign-in to the MyCW portal
+sso: description
+
+# 6259ed, MyCW, Permissions, SSO, sso
+dn: sso=6259ed,sso=MyCW,ou=Permissions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: read
+ssoGrant: true
+sso: 6259ed
+
+# ad6fb2, Admin, MyCW, Permissions, SSO, sso
+dn: sso=ad6fb2,sso=Admin,sso=MyCW,ou=Permissions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=user,sso=admin,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: create
+ssoGrant: true
+sso: ad6fb2
+
+# 307d22, Admin, MyCW, Permissions, SSO, sso
+dn: sso=307d22,sso=Admin,sso=MyCW,ou=Permissions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=admin,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: update
+ssoGrant: true
+sso: 307d22
+
+# dd1850, Admin, MyCW, Permissions, SSO, sso
+dn: sso=dd1850,sso=Admin,sso=MyCW,ou=Permissions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=admin,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: read
+ssoGrant: true
+sso: dd1850
+
+# parent, Admin, MyCW, Permissions, SSO, sso
+dn: sso=parent,sso=Admin,sso=MyCW,ou=Permissions,ou=SSO,dc=sso
+objectClass: ssoAttribute
+ssoValue: MyCW
+sso: parent
+
+# description, Admin, MyCW, Permissions, SSO, sso
+dn: sso=description,sso=Admin,sso=MyCW,ou=Permissions,ou=SSO,dc=sso
+objectClass: ssoAttribute
+ssoValue: An Admin user of the MyCW Portal
+sso: description
+
+# 8db467, Admin, MyCW, Permissions, SSO, sso
+dn: sso=8db467,sso=Admin,sso=MyCW,ou=Permissions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=admin,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: delete
+ssoGrant: true
+sso: 8db467
+
+# c71b4b, Admin, MyCW, Permissions, SSO, sso
+dn: sso=c71b4b,sso=Admin,sso=MyCW,ou=Permissions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=user,sso=admin,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: delete
+ssoGrant: true
+sso: c71b4b
+
+# f0bcc5, Admin, MyCW, Permissions, SSO, sso
+dn: sso=f0bcc5,sso=Admin,sso=MyCW,ou=Permissions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=user,sso=admin,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: read
+ssoGrant: true
+sso: f0bcc5
+
+# ea45dd, Admin, MyCW, Permissions, SSO, sso
+dn: sso=ea45dd,sso=Admin,sso=MyCW,ou=Permissions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=admin,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: create
+ssoGrant: true
+sso: ea45dd
+
+# 1d3723, Admin, MyCW, Permissions, SSO, sso
+dn: sso=1d3723,sso=Admin,sso=MyCW,ou=Permissions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=user,sso=admin,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: update
+ssoGrant: true
+sso: 1d3723
+
+# 27fb47, IPVPN, Wholesale, Generic, User, MyCW, Permissions, SSO, sso
+dn: sso=27fb47,sso=IPVPN,sso=Wholesale,sso=Generic,sso=User,sso=MyCW,ou=Permis
+ sions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=wipvpn,sso=reseller,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: read
+ssoGrant: true
+sso: 27fb47
+
+# 8a027b, IPVPN, Wholesale, Generic, User, MyCW, Permissions, SSO, sso
+dn: sso=8a027b,sso=IPVPN,sso=Wholesale,sso=Generic,sso=User,sso=MyCW,ou=Permis
+ sions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=mystats,sso=services,sso=external,sso=mycw,ou=Resources,ou=SS
+ O
+ssoDescription: read
+ssoGrant: true
+sso: 8a027b
+
+# 376df1, IPVPN, Wholesale, Generic, User, MyCW, Permissions, SSO, sso
+dn: sso=376df1,sso=IPVPN,sso=Wholesale,sso=Generic,sso=User,sso=MyCW,ou=Permis
+ sions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=incident,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: read
+ssoGrant: true
+sso: 376df1
+
+# 28e500, IPVPN, Wholesale, Generic, User, MyCW, Permissions, SSO, sso
+dn: sso=28e500,sso=IPVPN,sso=Wholesale,sso=Generic,sso=User,sso=MyCW,ou=Permis
+ sions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=4sure,sso=services,sso=external,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: read
+ssoGrant: true
+sso: 28e500
+
+# a2a66d, IPVPN, Wholesale, Generic, User, MyCW, Permissions, SSO, sso
+dn: sso=a2a66d,sso=IPVPN,sso=Wholesale,sso=Generic,sso=User,sso=MyCW,ou=Permis
+ sions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=ebilling,sso=services,sso=external,sso=mycw,ou=Resources,ou=S
+ SO
+ssoDescription: read
+ssoGrant: true
+sso: a2a66d
+
+# parent, IPVPN, Wholesale, Generic, User, MyCW, Permissions, SSO, sso
+dn: sso=parent,sso=IPVPN,sso=Wholesale,sso=Generic,sso=User,sso=MyCW,ou=Permis
+ sions,ou=SSO,dc=sso
+objectClass: ssoAttribute
+ssoValue: Wholesale:Generic:User:MyCW
+sso: parent
+
+# description, IPVPN, Wholesale, Generic, User, MyCW, Permissions, SSO, sso
+dn: sso=description,sso=IPVPN,sso=Wholesale,sso=Generic,sso=User,sso=MyCW,ou=P
+ ermissions,ou=SSO,dc=sso
+objectClass: ssoAttribute
+ssoValue: A Wholesale IPVPN user
+sso: description
+
+# b49044, IPVPN, Wholesale, Generic, User, MyCW, Permissions, SSO, sso
+dn: sso=b49044,sso=IPVPN,sso=Wholesale,sso=Generic,sso=User,sso=MyCW,ou=Permis
+ sions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=incident,sso=enterprise,sso=portal,sso=mycw,ou=Resources,ou=S
+ SO
+ssoDescription: read
+ssoGrant: true
+sso: b49044
+
+# 824d27, IPVPN, Wholesale, Generic, User, MyCW, Permissions, SSO, sso
+dn: sso=824d27,sso=IPVPN,sso=Wholesale,sso=Generic,sso=User,sso=MyCW,ou=Permis
+ sions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=salesforce,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: read
+ssoGrant: true
+sso: 824d27
+
+# 9c0eef, IPVPN, Wholesale, Generic, User, MyCW, Permissions, SSO, sso
+dn: sso=9c0eef,sso=IPVPN,sso=Wholesale,sso=Generic,sso=User,sso=MyCW,ou=Permis
+ sions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=incident,sso=enterprise,sso=portal,sso=mycw,ou=Resources,ou=S
+ SO
+ssoDescription: create
+ssoGrant: true
+sso: 9c0eef
+
+# 3d092f, IPVPN, Wholesale, Generic, User, MyCW, Permissions, SSO, sso
+dn: sso=3d092f,sso=IPVPN,sso=Wholesale,sso=Generic,sso=User,sso=MyCW,ou=Permis
+ sions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=srua,sso=services,sso=external,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: read
+ssoGrant: true
+sso: 3d092f
+
+# ed309c, IPVPN, Wholesale, Generic, User, MyCW, Permissions, SSO, sso
+dn: sso=ed309c,sso=IPVPN,sso=Wholesale,sso=Generic,sso=User,sso=MyCW,ou=Permis
+ sions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=order,sso=reseller,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: read
+ssoGrant: true
+sso: ed309c
+
+# parent, Assurer, THUS, Company Specific, User, MyCW, Permissions, SSO, sso
+dn: sso=parent,sso=Assurer,sso=THUS,sso=Company Specific,sso=User,sso=MyCW,ou=
+ Permissions,ou=SSO,dc=sso
+objectClass: ssoAttribute
+ssoValue: THUS:Company Specific:User:MyCW
+sso: parent
+
+# 376df1, Assurer, THUS, Company Specific, User, MyCW, Permissions, SSO, sso
+dn: sso=376df1,sso=Assurer,sso=THUS,sso=Company Specific,sso=User,sso=MyCW,ou=
+ Permissions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=incident,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: read
+ssoGrant: true
+sso: 376df1
+
+# ad27b3, Assurer, THUS, Company Specific, User, MyCW, Permissions, SSO, sso
+dn: sso=ad27b3,sso=Assurer,sso=THUS,sso=Company Specific,sso=User,sso=MyCW,ou=
+ Permissions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=incident,sso=enterprise,sso=portal,sso=mycw,ou=Resources,ou=S
+ SO
+ssoDescription: update
+ssoGrant: true
+sso: ad27b3
+
+# e6970e, Assurer, THUS, Company Specific, User, MyCW, Permissions, SSO, sso
+dn: sso=e6970e,sso=Assurer,sso=THUS,sso=Company Specific,sso=User,sso=MyCW,ou=
+ Permissions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=incident,sso=enterprise,sso=portal,sso=mycw,ou=Resources,ou=S
+ SO
+ssoDescription: delete
+ssoGrant: true
+sso: e6970e
+
+# b49044, Assurer, THUS, Company Specific, User, MyCW, Permissions, SSO, sso
+dn: sso=b49044,sso=Assurer,sso=THUS,sso=Company Specific,sso=User,sso=MyCW,ou=
+ Permissions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=incident,sso=enterprise,sso=portal,sso=mycw,ou=Resources,ou=S
+ SO
+ssoDescription: read
+ssoGrant: true
+sso: b49044
+
+# search result
+search: 2
+result: 0 Success
+
+# numResponses: 93
+# numEntries: 92

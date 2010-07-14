@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class Sso_Ldap_Connection</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class Sso_Ldap_Connection</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sso_Ldap_Connection</p>
+<p class="description"><p>Handles connecting to the LDAP server and storage and retrieval of data.</p></p>
+		<p class="notes">
+			Located in <a class="field" href="_Ldap---Connection.php.html">/Ldap/Connection.php</a> (line <span class="field">9</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+												<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																				
+												<div class="method-definition">
+											<span class="method-result">Sso_Ldap_Connection</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											(<span class="var-type">$url</span>&nbsp;<span class="var-name">$url</span>, <span class="var-type">$base_dn</span>&nbsp;<span class="var-name">$base_dn</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../default/Sso_Ldap_Connection.html">Sso_Ldap_Connection</a></span>
+										<a href="#addCacheBackend" title="details" class="method-name">addCacheBackend</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$cache</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#addEntry" title="details" class="method-name">addEntry</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$dn</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$entry</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#delEntryAttribute" title="details" class="method-name">delEntryAttribute</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$dn</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$attribute</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../sso/Sso_Ldap_Entry.html">Sso_Ldap_Entry</a></span>
+										<a href="#getBase" title="details" class="method-name">getBase</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#getEntryAttribute" title="details" class="method-name">getEntryAttribute</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$dn</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$attribute</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../sso/Sso_Ldap_EntryIterator.html">Sso_Ldap_EntryIterator</a></span>
+										<a href="#getEntryChildren" title="details" class="method-name">getEntryChildren</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$dn</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#hasEntryAttribute" title="details" class="method-name">hasEntryAttribute</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$dn</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$attribute</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../sso/Sso_Ldap_EntryIterator.html">Sso_Ldap_EntryIterator</a></span>
+										<a href="#search" title="details" class="method-name">search</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$base</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$filter</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../default/Sso_Ldap_Connection.html">Sso_Ldap_Connection</a></span>
+										<a href="#setBind" title="details" class="method-name">setBind</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$dn</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$pw</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../default/Sso_Ldap_Connection.html">Sso_Ldap_Connection</a></span>
+										<a href="#setChildCacheTimeout" title="details" class="method-name">setChildCacheTimeout</a>
+											(<span class="var-type">$timeout</span>&nbsp;<span class="var-name">$timeout</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#setEntryAttrbiute" title="details" class="method-name">setEntryAttrbiute</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$dn</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$attribute</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../default/Sso_Ldap_Connection.html">Sso_Ldap_Connection</a></span>
+										<a href="#setLdapOption" title="details" class="method-name">setLdapOption</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$constant</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../default/Sso_Ldap_Connection.html">Sso_Ldap_Connection</a></span>
+										<a href="#setSearchCacheTimeout" title="details" class="method-name">setSearchCacheTimeout</a>
+											(<span class="var-type">$timeout</span>&nbsp;<span class="var-name">$timeout</span>)
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number">36</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Connect to the LDAP server $url specified in the format ldap://hostname and provide a base DN.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Sso_Ldap_Connection</span>
+		<span class="method-name">
+			__construct
+		</span>
+					(<span class="var-type">$url</span>&nbsp;<span class="var-name">$url</span>, <span class="var-type">$base_dn</span>&nbsp;<span class="var-name">$base_dn</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$url</span>
+				<span class="var-name">$url</span><span class="var-description">: string</span>			</li>
+					<li>
+				<span class="var-type">$base_dn</span>
+				<span class="var-name">$base_dn</span><span class="var-description">: string</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodaddCacheBackend" id="addCacheBackend"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">addCacheBackend</span> (line <span class="line-number">72</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Add and enable a cache backend.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../default/Sso_Ldap_Connection.html">Sso_Ldap_Connection</a></span>
+		<span class="method-name">
+			addCacheBackend
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$cache</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../sso/Sso_Cache_Base.html">Sso_Cache_Base</a></span>
+				<span class="var-name">$cache</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodaddEntry" id="addEntry"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">addEntry</span> (line <span class="line-number">299</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Save an $entry at the location specified by $dn. $entry should be an associative array of attributes and values. To create multiple  attributes of the same name provide an array of values for that attribute.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Returns true on success and false on failure.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			addEntry
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$dn</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$entry</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$dn</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$entry</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddelEntryAttribute" id="delEntryAttribute"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">delEntryAttribute</span> (line <span class="line-number">261</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Removes the $attribute contained in the entry located at $dn. Optionally providing a $value to remove a specific attribute  when there are multiple attributes of that type.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Returns true on success and false on failure.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			delEntryAttribute
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$dn</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$attribute</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$dn</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$attribute</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetBase" id="getBase"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getBase</span> (line <span class="line-number">140</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the base LDAP entry.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../sso/Sso_Ldap_Entry.html">Sso_Ldap_Entry</a></span>
+		<span class="method-name">
+			getBase
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetEntryAttribute" id="getEntryAttribute"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getEntryAttribute</span> (line <span class="line-number">155</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the value of $attribute of the entry $dn.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getEntryAttribute
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$dn</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$attribute</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$dn</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$attribute</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetEntryChildren" id="getEntryChildren"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getEntryChildren</span> (line <span class="line-number">321</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return the children of the specified entry as an Sso_Ldap_EntryIterator.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../sso/Sso_Ldap_EntryIterator.html">Sso_Ldap_EntryIterator</a></span>
+		<span class="method-name">
+			getEntryChildren
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$dn</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$dn</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodhasEntryAttribute" id="hasEntryAttribute"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">hasEntryAttribute</span> (line <span class="line-number">190</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns true/false if the specified $dn contains the given $attribute.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			hasEntryAttribute
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$dn</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$attribute</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$dn</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$attribute</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsearch" id="search"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">search</span> (line <span class="line-number">354</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Search the repository from the specified $base using the provided filter returning the results as an  Sso_Ldap_EntryIterator.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../sso/Sso_Ldap_EntryIterator.html">Sso_Ldap_EntryIterator</a></span>
+		<span class="method-name">
+			search
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$base</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$filter</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$base</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$filter</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetBind" id="setBind"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">setBind</span> (line <span class="line-number">84</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set the LDAP bind details; the bind $dn and password $pw.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../default/Sso_Ldap_Connection.html">Sso_Ldap_Connection</a></span>
+		<span class="method-name">
+			setBind
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$dn</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$pw</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$dn</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$pw</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetChildCacheTimeout" id="setChildCacheTimeout"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">setChildCacheTimeout</span> (line <span class="line-number">48</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set the cache timeout of child nodes in seconds. Child nodes are the result of the getEntryChildren call.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../default/Sso_Ldap_Connection.html">Sso_Ldap_Connection</a></span>
+		<span class="method-name">
+			setChildCacheTimeout
+		</span>
+					(<span class="var-type">$timeout</span>&nbsp;<span class="var-name">$timeout</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$timeout</span>
+				<span class="var-name">$timeout</span><span class="var-description">: int</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetEntryAttrbiute" id="setEntryAttrbiute"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">setEntryAttrbiute</span> (line <span class="line-number">220</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set the $value of an $attribute contained in the entry located at $dn.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Returns true on success and false on error.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			setEntryAttrbiute
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$dn</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$attribute</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$dn</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$attribute</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetLdapOption" id="setLdapOption"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">setLdapOption</span> (line <span class="line-number">100</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets an option on the LDAP connection.</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="http://php.net/manual/en/function.ldap-set-option.php">http://php.net/manual/en/function.ldap-set-option.php</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../default/Sso_Ldap_Connection.html">Sso_Ldap_Connection</a></span>
+		<span class="method-name">
+			setLdapOption
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$constant</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$constant</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetSearchCacheTimeout" id="setSearchCacheTimeout"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">setSearchCacheTimeout</span> (line <span class="line-number">60</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set the cache timeout of calls to search in seconds.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../default/Sso_Ldap_Connection.html">Sso_Ldap_Connection</a></span>
+		<span class="method-name">
+			setSearchCacheTimeout
+		</span>
+					(<span class="var-type">$timeout</span>&nbsp;<span class="var-name">$timeout</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$timeout</span>
+				<span class="var-name">$timeout</span><span class="var-description">: int</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Thu, 23 Jul 2009 17:19:27 +0100 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+	</p>
+	</div></body>
+</html>

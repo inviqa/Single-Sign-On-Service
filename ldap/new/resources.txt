@@ -1,0 +1,174 @@
+# extended LDIF
+#
+# LDAPv3
+# base <ou=Resources,ou=SSO,dc=sso> with scope subtree
+# filter: (objectclass=*)
+# requesting: ALL
+#
+
+# Resources, SSO, sso
+dn: ou=Resources,ou=SSO,dc=sso
+ou: Resources
+objectClass: organizationalUnit
+
+# mycw, Resources, SSO, sso
+dn: sso=mycw,ou=Resources,ou=SSO,dc=sso
+objectClass: ssoResource
+sso: mycw
+
+# portal, mycw, Resources, SSO, sso
+dn: sso=portal,sso=mycw,ou=Resources,ou=SSO,dc=sso
+objectClass: ssoResource
+sso: portal
+
+# admin, portal, mycw, Resources, SSO, sso
+dn: sso=admin,sso=portal,sso=mycw,ou=Resources,ou=SSO,dc=sso
+objectClass: ssoResource
+sso: admin
+
+# organisation, admin, portal, mycw, Resources, SSO, sso
+dn: sso=organisation,sso=admin,sso=portal,sso=mycw,ou=Resources,ou=SSO,dc=sso
+objectClass: ssoResource
+sso: organisation
+
+# user, admin, portal, mycw, Resources, SSO, sso
+dn: sso=user,sso=admin,sso=portal,sso=mycw,ou=Resources,ou=SSO,dc=sso
+objectClass: ssoResource
+sso: user
+
+# document, portal, mycw, Resources, SSO, sso
+dn: sso=document,sso=portal,sso=mycw,ou=Resources,ou=SSO,dc=sso
+objectClass: ssoResource
+sso: document
+
+# incident, portal, mycw, Resources, SSO, sso
+dn: sso=incident,sso=portal,sso=mycw,ou=Resources,ou=SSO,dc=sso
+objectClass: ssoResource
+sso: incident
+
+# order, portal, mycw, Resources, SSO, sso
+dn: sso=order,sso=portal,sso=mycw,ou=Resources,ou=SSO,dc=sso
+objectClass: ssoResource
+sso: order
+
+# salesforce, portal, mycw, Resources, SSO, sso
+dn: sso=salesforce,sso=portal,sso=mycw,ou=Resources,ou=SSO,dc=sso
+objectClass: ssoResource
+sso: salesforce
+
+# reseller, portal, mycw, Resources, SSO, sso
+dn: sso=reseller,sso=portal,sso=mycw,ou=Resources,ou=SSO,dc=sso
+objectClass: ssoResource
+sso: reseller
+
+# enterprise, portal, mycw, Resources, SSO, sso
+dn: sso=enterprise,sso=portal,sso=mycw,ou=Resources,ou=SSO,dc=sso
+objectClass: ssoResource
+sso: enterprise
+
+# saas, portal, mycw, Resources, SSO, sso
+dn: sso=saas,sso=portal,sso=mycw,ou=Resources,ou=SSO,dc=sso
+objectClass: ssoResource
+sso: saas
+
+# order, enterprise, portal, mycw, Resources, SSO, sso
+dn: sso=order,sso=enterprise,sso=portal,sso=mycw,ou=Resources,ou=SSO,dc=sso
+objectClass: ssoResource
+sso: order
+
+# incident, enterprise, portal, mycw, Resources, SSO, sso
+dn: sso=incident,sso=enterprise,sso=portal,sso=mycw,ou=Resources,ou=SSO,dc=sso
+objectClass: ssoResource
+sso: incident
+
+# order, reseller, portal, mycw, Resources, SSO, sso
+dn: sso=order,sso=reseller,sso=portal,sso=mycw,ou=Resources,ou=SSO,dc=sso
+objectClass: ssoResource
+sso: order
+
+# incident, reseller, portal, mycw, Resources, SSO, sso
+dn: sso=incident,sso=reseller,sso=portal,sso=mycw,ou=Resources,ou=SSO,dc=sso
+objectClass: ssoResource
+sso: incident
+
+# order, saas, portal, mycw, Resources, SSO, sso
+dn: sso=order,sso=saas,sso=portal,sso=mycw,ou=Resources,ou=SSO,dc=sso
+objectClass: ssoResource
+sso: order
+
+# incident, saas, portal, mycw, Resources, SSO, sso
+dn: sso=incident,sso=saas,sso=portal,sso=mycw,ou=Resources,ou=SSO,dc=sso
+objectClass: ssoResource
+sso: incident
+
+# saas, admin, portal, mycw, Resources, SSO, sso
+dn: sso=saas,sso=admin,sso=portal,sso=mycw,ou=Resources,ou=SSO,dc=sso
+objectClass: ssoResource
+sso: saas
+
+# top, portal, mycw, Resources, SSO, sso
+dn: sso=top,sso=portal,sso=mycw,ou=Resources,ou=SSO,dc=sso
+objectClass: ssoResource
+sso: top
+
+# external, mycw, Resources, SSO, sso
+dn: sso=external,sso=mycw,ou=Resources,ou=SSO,dc=sso
+objectClass: ssoResource
+sso: external
+
+# services, external, mycw, Resources, SSO, sso
+dn: sso=services,sso=external,sso=mycw,ou=Resources,ou=SSO,dc=sso
+objectClass: ssoResource
+sso: services
+
+# top, services, external, mycw, Resources, SSO, sso
+dn: sso=top,sso=services,sso=external,sso=mycw,ou=Resources,ou=SSO,dc=sso
+objectClass: ssoResource
+sso: top
+
+# dia, reseller, portal, mycw, Resources, SSO, sso
+dn: sso=dia,sso=reseller,sso=portal,sso=mycw,ou=Resources,ou=SSO,dc=sso
+objectClass: ssoResource
+sso: dia
+
+# srua, services, external, mycw, Resources, SSO, sso
+dn: sso=srua,sso=services,sso=external,sso=mycw,ou=Resources,ou=SSO,dc=sso
+objectClass: ssoResource
+sso: srua
+
+# mystats, services, external, mycw, Resources, SSO, sso
+dn: sso=mystats,sso=services,sso=external,sso=mycw,ou=Resources,ou=SSO,dc=sso
+objectClass: ssoResource
+sso: mystats
+
+# 4sure, services, external, mycw, Resources, SSO, sso
+dn: sso=4sure,sso=services,sso=external,sso=mycw,ou=Resources,ou=SSO,dc=sso
+objectClass: ssoResource
+sso: 4sure
+
+# ebilling, services, external, mycw, Resources, SSO, sso
+dn: sso=ebilling,sso=services,sso=external,sso=mycw,ou=Resources,ou=SSO,dc=sso
+objectClass: ssoResource
+sso: ebilling
+
+# wad, reseller, portal, mycw, Resources, SSO, sso
+dn: sso=wad,sso=reseller,sso=portal,sso=mycw,ou=Resources,ou=SSO,dc=sso
+objectClass: ssoResource
+sso: wad
+
+# topcw, services, external, mycw, Resources, SSO, sso
+dn: sso=topcw,sso=services,sso=external,sso=mycw,ou=Resources,ou=SSO,dc=sso
+objectClass: ssoResource
+sso: topcw
+
+# wipvpn, reseller, portal, mycw, Resources, SSO, sso
+dn: sso=wipvpn,sso=reseller,sso=portal,sso=mycw,ou=Resources,ou=SSO,dc=sso
+objectClass: ssoResource
+sso: wipvpn
+
+# search result
+search: 2
+result: 0 Success
+
+# numResponses: 33
+# numEntries: 32

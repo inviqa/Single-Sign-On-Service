@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class Sso_Ldap_EntryIterator</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class Sso_Ldap_EntryIterator</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+                <p class="implements">
+            Implements interfaces:
+            <ul>
+                <li>Iterator (internal interface)</li><li>Countable (internal interface)</li>            </ul>
+        </p>
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sso_Ldap_EntryIterator</p>
+<p class="description"><p>Allows you to iterate over collections of LDAP entries. Also provides local filtering and sort functionality.</p></p>
+		<p class="notes">
+			Located in <a class="field" href="_Ldap---EntryIterator.php.html">/Ldap/EntryIterator.php</a> (line <span class="field">13</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+												<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																												
+												<div class="method-definition">
+											<span class="method-result">unknown_type</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											(<span class="var-type">$entries</span>&nbsp;<span class="var-name">$entries</span>, <span class="var-type"><a href="../sso/Sso_Ldap_Connection.html">Sso_Ldap_Connection</a></span>&nbsp;<span class="var-name">$conn</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#count" title="details" class="method-name">count</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#current" title="details" class="method-name">current</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../sso/Sso_Ldap_EntryIterator.html">Sso_Ldap_EntryIterator</a></span>
+										<a href="#excludeFilter" title="details" class="method-name">excludeFilter</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$filters</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$fuzzy</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../sso/Sso_Ldap_EntryIterator.html">Sso_Ldap_EntryIterator</a></span>
+										<a href="#includeFilter" title="details" class="method-name">includeFilter</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$filters</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$fuzzy</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#key" title="details" class="method-name">key</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#next" title="details" class="method-name">next</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#removeDn" title="details" class="method-name">removeDn</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$dn</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#rewind" title="details" class="method-name">rewind</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../sso/Sso_Ldap_EntryIterator.html">Sso_Ldap_EntryIterator</a></span>
+										<a href="#setFuzzyTolerance" title="details" class="method-name">setFuzzyTolerance</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$tolerance</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../sso/Sso_Ldap_EntryIterator.html">Sso_Ldap_EntryIterator</a></span>
+										<a href="#sort" title="details" class="method-name">sort</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$attributes</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$class</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#toArray" title="details" class="method-name">toArray</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#valid" title="details" class="method-name">valid</a>
+										()
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number">28</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Create a new Sso_Ldap_EntryIterator providing an array of DNs to iterate over and a Sso_Ldap_Connection object.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">unknown_type</span>
+		<span class="method-name">
+			__construct
+		</span>
+					(<span class="var-type">$entries</span>&nbsp;<span class="var-name">$entries</span>, <span class="var-type"><a href="../sso/Sso_Ldap_Connection.html">Sso_Ldap_Connection</a></span>&nbsp;<span class="var-name">$conn</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$entries</span>
+				<span class="var-name">$entries</span>			</li>
+					<li>
+				<span class="var-type">$conn</span>
+				<span class="var-name">$conn</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcount" id="count"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">count</span> (line <span class="line-number">60</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			count
+		</span>
+				()
+			</div>
+	
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt>Countable::count</dt>
+					</dl>
+			
+	</div>
+<a name="methodcurrent" id="current"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">current</span> (line <span class="line-number">40</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			current
+		</span>
+				()
+			</div>
+	
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt>Iterator::current</dt>
+					</dl>
+			
+	</div>
+<a name="methodexcludeFilter" id="excludeFilter"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">excludeFilter</span> (line <span class="line-number">124</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Filter the contained entries excluding matched items. Provide an array of attribute =&gt; value  matches. Can also handle partial matches using * and ? as wildcard characters. And you can  optionally provide the second parameter to enable fuzzy matching.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Returns the filtered iterator.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../sso/Sso_Ldap_EntryIterator.html">Sso_Ldap_EntryIterator</a></span>
+		<span class="method-name">
+			excludeFilter
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$filters</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$fuzzy</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$filters</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$fuzzy</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodincludeFilter" id="includeFilter"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">includeFilter</span> (line <span class="line-number">155</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Filter the contained entries excluding items that do not match. Provide an array of attribute =&gt; value  matches. Can also handle partial matches using * and ? as wildcard characters. And you can  optionally provide the second parameter to enable fuzzy matching.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Returns the filtered iterator.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../sso/Sso_Ldap_EntryIterator.html">Sso_Ldap_EntryIterator</a></span>
+		<span class="method-name">
+			includeFilter
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$filters</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$fuzzy</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$filters</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$fuzzy</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodkey" id="key"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">key</span> (line <span class="line-number">45</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			key
+		</span>
+				()
+			</div>
+	
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt>Iterator::key</dt>
+					</dl>
+			
+	</div>
+<a name="methodnext" id="next"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">next</span> (line <span class="line-number">50</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			next
+		</span>
+				()
+			</div>
+	
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt>Iterator::next</dt>
+					</dl>
+			
+	</div>
+<a name="methodremoveDn" id="removeDn"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">removeDn</span> (line <span class="line-number">182</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Remove the specified $dn from the iterator.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			removeDn
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$dn</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$dn</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodrewind" id="rewind"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">rewind</span> (line <span class="line-number">34</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			rewind
+		</span>
+				()
+			</div>
+	
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt>Iterator::rewind</dt>
+					</dl>
+			
+	</div>
+<a name="methodsetFuzzyTolerance" id="setFuzzyTolerance"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">setFuzzyTolerance</span> (line <span class="line-number">72</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set the fuzzy search tollerance used when using fuzzy filtering. Is an integer  specifying the lowest similarity % that will cause a match. Default is 60.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../sso/Sso_Ldap_EntryIterator.html">Sso_Ldap_EntryIterator</a></span>
+		<span class="method-name">
+			setFuzzyTolerance
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$tolerance</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$tolerance</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsort" id="sort"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">sort</span> (line <span class="line-number">196</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sort the entries in the collection by the provided $attributes, optionally only specifying a particular $class to sort (will  ignore other objectClasses). The attributes should take the format of either array(column,column,...) or  array(column =&gt; direction). Direction is either asc or desc. Returns the sorted iterator.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../sso/Sso_Ldap_EntryIterator.html">Sso_Ldap_EntryIterator</a></span>
+		<span class="method-name">
+			sort
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$attributes</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$class</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$attributes</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$class</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodtoArray" id="toArray"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">toArray</span> (line <span class="line-number">263</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return the collection as an associative array of DNs =&gt; attributes.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			toArray
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodvalid" id="valid"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">valid</span> (line <span class="line-number">55</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			valid
+		</span>
+				()
+			</div>
+	
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt>Iterator::valid</dt>
+					</dl>
+			
+	</div>
+						
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Fri, 24 Jul 2009 17:12:44 +0100 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+	</p>
+	</div></body>
+</html>

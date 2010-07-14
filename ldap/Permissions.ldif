@@ -1,0 +1,596 @@
+# extended LDIF
+#
+# LDAPv3
+# base <ou=Permissions,ou=SSO,dc=sso> with scope subtree
+# filter: (objectclass=*)
+# requesting: ALL
+#
+
+# mycw_user, Permissions, SSO, sso
+dn: sso=mycw_user,ou=Permissions,ou=SSO,dc=sso
+objectClass: ssoRole
+sso: mycw_user
+
+# 6259ed, mycw_user, Permissions, SSO, sso
+dn: sso=6259ed,sso=mycw_user,ou=Permissions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: read
+ssoGrant: true
+sso: 6259ed
+
+# mycw_admin, Permissions, SSO, sso
+dn: sso=mycw_admin,ou=Permissions,ou=SSO,dc=sso
+objectClass: ssoRole
+sso: mycw_admin
+
+# ad6fb2, mycw_admin, Permissions, SSO, sso
+dn: sso=ad6fb2,sso=mycw_admin,ou=Permissions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=user,sso=admin,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: create
+ssoGrant: true
+sso: ad6fb2
+
+# 627fed, mycw_admin, Permissions, SSO, sso
+dn: sso=627fed,sso=mycw_admin,ou=Permissions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=billing,sso=admin,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: update
+ssoGrant: true
+sso: 627fed
+
+# 0b3051, mycw_admin, Permissions, SSO, sso
+dn: sso=0b3051,sso=mycw_admin,ou=Permissions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=billing,sso=admin,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: read
+ssoGrant: true
+sso: 0b3051
+
+# 426b93, mycw_admin, Permissions, SSO, sso
+dn: sso=426b93,sso=mycw_admin,ou=Permissions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=document,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: delete
+ssoGrant: true
+sso: 426b93
+
+# 0711c2, mycw_admin, Permissions, SSO, sso
+dn: sso=0711c2,sso=mycw_admin,ou=Permissions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=incident,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: update
+ssoGrant: true
+sso: 0711c2
+
+# 059150, mycw_admin, Permissions, SSO, sso
+dn: sso=059150,sso=mycw_admin,ou=Permissions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=document,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: create
+ssoGrant: true
+sso: 059150
+
+# 1d3723, mycw_admin, Permissions, SSO, sso
+dn: sso=1d3723,sso=mycw_admin,ou=Permissions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=user,sso=admin,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: update
+ssoGrant: true
+sso: 1d3723
+
+# 3ac8a8, mycw_admin, Permissions, SSO, sso
+dn: sso=3ac8a8,sso=mycw_admin,ou=Permissions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=order,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: create
+ssoGrant: true
+sso: 3ac8a8
+
+# 4c5cdd, mycw_admin, Permissions, SSO, sso
+dn: sso=4c5cdd,sso=mycw_admin,ou=Permissions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=document,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: read
+ssoGrant: true
+sso: 4c5cdd
+
+# a82279, mycw_admin, Permissions, SSO, sso
+dn: sso=a82279,sso=mycw_admin,ou=Permissions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=incident,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: delete
+ssoGrant: true
+sso: a82279
+
+# 3c63e0, mycw_admin, Permissions, SSO, sso
+dn: sso=3c63e0,sso=mycw_admin,ou=Permissions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=order,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: update
+ssoGrant: true
+sso: 3c63e0
+
+# f0bcc5, mycw_admin, Permissions, SSO, sso
+dn: sso=f0bcc5,sso=mycw_admin,ou=Permissions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=user,sso=admin,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: read
+ssoGrant: true
+sso: f0bcc5
+
+# d29d6b, mycw_admin, Permissions, SSO, sso
+dn: sso=d29d6b,sso=mycw_admin,ou=Permissions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=organisation,sso=admin,sso=portal,sso=mycw,ou=Resources,ou=SS
+ O
+ssoDescription: read
+ssoGrant: true
+sso: d29d6b
+
+# 235351, mycw_admin, Permissions, SSO, sso
+dn: sso=235351,sso=mycw_admin,ou=Permissions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=incident,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: create
+ssoGrant: true
+sso: 235351
+
+# 7dd5c0, mycw_admin, Permissions, SSO, sso
+dn: sso=7dd5c0,sso=mycw_admin,ou=Permissions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=document,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: update
+ssoGrant: true
+sso: 7dd5c0
+
+# b50d12, mycw_admin, Permissions, SSO, sso
+dn: sso=b50d12,sso=mycw_admin,ou=Permissions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=order,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: read
+ssoGrant: true
+sso: b50d12
+
+# 4a1daf, mycw_admin, Permissions, SSO, sso
+dn: sso=4a1daf,sso=mycw_admin,ou=Permissions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=billing,sso=admin,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: create
+ssoGrant: true
+sso: 4a1daf
+
+# 376df1, mycw_admin, Permissions, SSO, sso
+dn: sso=376df1,sso=mycw_admin,ou=Permissions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=incident,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: read
+ssoGrant: true
+sso: 376df1
+
+# 02974e, mycw_admin, Permissions, SSO, sso
+dn: sso=02974e,sso=mycw_admin,ou=Permissions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=organisation,sso=admin,sso=portal,sso=mycw,ou=Resources,ou=SS
+ O
+ssoDescription: update
+ssoGrant: true
+sso: 02974e
+
+# c71b4b, mycw_admin, Permissions, SSO, sso
+dn: sso=c71b4b,sso=mycw_admin,ou=Permissions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=user,sso=admin,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: delete
+ssoGrant: true
+sso: c71b4b
+
+# Generic, mycw_user, Permissions, SSO, sso
+dn: sso=Generic,sso=mycw_user,ou=Permissions,ou=SSO,dc=sso
+objectClass: ssoRole
+sso: Generic
+
+# SaaS Reseller, Generic, mycw_user, Permissions, SSO, sso
+dn: sso=SaaS Reseller,sso=Generic,sso=mycw_user,ou=Permissions,ou=SSO,dc=sso
+objectClass: ssoRole
+sso: SaaS Reseller
+
+# SaaS Admin, Generic, mycw_user, Permissions, SSO, sso
+dn: sso=SaaS Admin,sso=Generic,sso=mycw_user,ou=Permissions,ou=SSO,dc=sso
+objectClass: ssoRole
+sso: SaaS Admin
+
+# Enterprise Customer, Generic, mycw_user, Permissions, SSO, sso
+dn: sso=Enterprise Customer,sso=Generic,sso=mycw_user,ou=Permissions,ou=SSO,dc
+ =sso
+objectClass: ssoRole
+sso: Enterprise Customer
+
+# Enterprise Admin, Generic, mycw_user, Permissions, SSO, sso
+dn: sso=Enterprise Admin,sso=Generic,sso=mycw_user,ou=Permissions,ou=SSO,dc=ss
+ o
+objectClass: ssoRole
+sso: Enterprise Admin
+
+# description, Enterprise Admin, Generic, mycw_user, Permissions, SSO, sso
+dn: sso=description,sso=Enterprise Admin,sso=Generic,sso=mycw_user,ou=Permissi
+ ons,ou=SSO,dc=sso
+objectClass: ssoAttribute
+ssoValue: Users that will need to manage Enterprise products
+sso: description
+
+# Wholesale Access Reseller, Generic, mycw_user, Permissions, SSO, sso
+dn: sso=Wholesale Access Reseller,sso=Generic,sso=mycw_user,ou=Permissions,ou=
+ SSO,dc=sso
+objectClass: ssoRole
+sso: Wholesale Access Reseller
+
+# Wholesale Access Admin, Generic, mycw_user, Permissions, SSO, sso
+dn: sso=Wholesale Access Admin,sso=Generic,sso=mycw_user,ou=Permissions,ou=SSO
+ ,dc=sso
+objectClass: ssoRole
+sso: Wholesale Access Admin
+
+# description, Wholesale Access Admin, Generic, mycw_user, Permissions, SSO, 
+ sso
+dn: sso=description,sso=Wholesale Access Admin,sso=Generic,sso=mycw_user,ou=Pe
+ rmissions,ou=SSO,dc=sso
+objectClass: ssoAttribute
+ssoValue: Users that will need to manage Wholesale Access products
+sso: description
+
+# Super Admin, Generic, mycw_user, Permissions, SSO, sso
+dn: sso=Super Admin,sso=Generic,sso=mycw_user,ou=Permissions,ou=SSO,dc=sso
+objectClass: ssoRole
+sso: Super Admin
+
+# description, Super Admin, Generic, mycw_user, Permissions, SSO, sso
+dn: sso=description,sso=Super Admin,sso=Generic,sso=mycw_user,ou=Permissions,o
+ u=SSO,dc=sso
+objectClass: ssoAttribute
+ssoValue: Users that will need all rights
+sso: description
+
+# 9c0eef, Enterprise Customer, Generic, mycw_user, Permissions, SSO, sso
+dn: sso=9c0eef,sso=Enterprise Customer,sso=Generic,sso=mycw_user,ou=Permission
+ s,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=incident,sso=enterprise,sso=portal,sso=mycw,ou=Resources,ou=S
+ SO
+ssoDescription: create
+ssoGrant: true
+sso: 9c0eef
+
+# 0352fb, Enterprise Customer, Generic, mycw_user, Permissions, SSO, sso
+dn: sso=0352fb,sso=Enterprise Customer,sso=Generic,sso=mycw_user,ou=Permission
+ s,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=order,sso=enterprise,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: update
+ssoGrant: true
+sso: 0352fb
+
+# 6e6f0d, Enterprise Customer, Generic, mycw_user, Permissions, SSO, sso
+dn: sso=6e6f0d,sso=Enterprise Customer,sso=Generic,sso=mycw_user,ou=Permission
+ s,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=order,sso=enterprise,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: read
+ssoGrant: true
+sso: 6e6f0d
+
+# parent, Enterprise Customer, Generic, mycw_user, Permissions, SSO, sso
+dn: sso=parent,sso=Enterprise Customer,sso=Generic,sso=mycw_user,ou=Permission
+ s,ou=SSO,dc=sso
+objectClass: ssoAttribute
+ssoValue: Generic:mycw_user
+sso: parent
+
+# description, Enterprise Customer, Generic, mycw_user, Permissions, SSO, sso
+dn: sso=description,sso=Enterprise Customer,sso=Generic,sso=mycw_user,ou=Permi
+ ssions,ou=SSO,dc=sso
+objectClass: ssoAttribute
+ssoValue: Users that will need to provide and assure Enterprise products
+sso: description
+
+# 5d3f97, Enterprise Customer, Generic, mycw_user, Permissions, SSO, sso
+dn: sso=5d3f97,sso=Enterprise Customer,sso=Generic,sso=mycw_user,ou=Permission
+ s,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=order,sso=enterprise,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: delete
+ssoGrant: true
+sso: 5d3f97
+
+# e6970e, Enterprise Customer, Generic, mycw_user, Permissions, SSO, sso
+dn: sso=e6970e,sso=Enterprise Customer,sso=Generic,sso=mycw_user,ou=Permission
+ s,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=incident,sso=enterprise,sso=portal,sso=mycw,ou=Resources,ou=S
+ SO
+ssoDescription: delete
+ssoGrant: true
+sso: e6970e
+
+# b49044, Enterprise Customer, Generic, mycw_user, Permissions, SSO, sso
+dn: sso=b49044,sso=Enterprise Customer,sso=Generic,sso=mycw_user,ou=Permission
+ s,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=incident,sso=enterprise,sso=portal,sso=mycw,ou=Resources,ou=S
+ SO
+ssoDescription: read
+ssoGrant: true
+sso: b49044
+
+# a90a27, Enterprise Customer, Generic, mycw_user, Permissions, SSO, sso
+dn: sso=a90a27,sso=Enterprise Customer,sso=Generic,sso=mycw_user,ou=Permission
+ s,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=order,sso=enterprise,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: create
+ssoGrant: true
+sso: a90a27
+
+# ad27b3, Enterprise Customer, Generic, mycw_user, Permissions, SSO, sso
+dn: sso=ad27b3,sso=Enterprise Customer,sso=Generic,sso=mycw_user,ou=Permission
+ s,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=incident,sso=enterprise,sso=portal,sso=mycw,ou=Resources,ou=S
+ SO
+ssoDescription: update
+ssoGrant: true
+sso: ad27b3
+
+# bb1284, SaaS Reseller, Generic, mycw_user, Permissions, SSO, sso
+dn: sso=bb1284,sso=SaaS Reseller,sso=Generic,sso=mycw_user,ou=Permissions,ou=S
+ SO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=incident,sso=saas,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: create
+ssoGrant: true
+sso: bb1284
+
+# 7859e6, SaaS Reseller, Generic, mycw_user, Permissions, SSO, sso
+dn: sso=7859e6,sso=SaaS Reseller,sso=Generic,sso=mycw_user,ou=Permissions,ou=S
+ SO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=order,sso=saas,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: update
+ssoGrant: true
+sso: 7859e6
+
+# 181040, SaaS Reseller, Generic, mycw_user, Permissions, SSO, sso
+dn: sso=181040,sso=SaaS Reseller,sso=Generic,sso=mycw_user,ou=Permissions,ou=S
+ SO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=order,sso=saas,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: read
+ssoGrant: true
+sso: 181040
+
+# parent, SaaS Reseller, Generic, mycw_user, Permissions, SSO, sso
+dn: sso=parent,sso=SaaS Reseller,sso=Generic,sso=mycw_user,ou=Permissions,ou=S
+ SO,dc=sso
+objectClass: ssoAttribute
+ssoValue: Generic:mycw_user
+sso: parent
+
+# description, SaaS Reseller, Generic, mycw_user, Permissions, SSO, sso
+dn: sso=description,sso=SaaS Reseller,sso=Generic,sso=mycw_user,ou=Permissions
+ ,ou=SSO,dc=sso
+objectClass: ssoAttribute
+ssoValue: Users that will need to provide and assure SaaS products
+sso: description
+
+# be5078, SaaS Reseller, Generic, mycw_user, Permissions, SSO, sso
+dn: sso=be5078,sso=SaaS Reseller,sso=Generic,sso=mycw_user,ou=Permissions,ou=S
+ SO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=order,sso=saas,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: delete
+ssoGrant: true
+sso: be5078
+
+# c075f4, SaaS Reseller, Generic, mycw_user, Permissions, SSO, sso
+dn: sso=c075f4,sso=SaaS Reseller,sso=Generic,sso=mycw_user,ou=Permissions,ou=S
+ SO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=incident,sso=saas,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: delete
+ssoGrant: true
+sso: c075f4
+
+# 55c6ff, SaaS Reseller, Generic, mycw_user, Permissions, SSO, sso
+dn: sso=55c6ff,sso=SaaS Reseller,sso=Generic,sso=mycw_user,ou=Permissions,ou=S
+ SO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=incident,sso=saas,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: read
+ssoGrant: true
+sso: 55c6ff
+
+# 211eb7, SaaS Reseller, Generic, mycw_user, Permissions, SSO, sso
+dn: sso=211eb7,sso=SaaS Reseller,sso=Generic,sso=mycw_user,ou=Permissions,ou=S
+ SO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=order,sso=saas,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: create
+ssoGrant: true
+sso: 211eb7
+
+# 05083d, SaaS Reseller, Generic, mycw_user, Permissions, SSO, sso
+dn: sso=05083d,sso=SaaS Reseller,sso=Generic,sso=mycw_user,ou=Permissions,ou=S
+ SO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=incident,sso=saas,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: update
+ssoGrant: true
+sso: 05083d
+
+# 0d0807, Wholesale Access Reseller, Generic, mycw_user, Permissions, SSO, ss
+ o
+dn: sso=0d0807,sso=Wholesale Access Reseller,sso=Generic,sso=mycw_user,ou=Perm
+ issions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=incident,sso=reseller,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: create
+ssoGrant: true
+sso: 0d0807
+
+# 17bf0b, Wholesale Access Reseller, Generic, mycw_user, Permissions, SSO, ss
+ o
+dn: sso=17bf0b,sso=Wholesale Access Reseller,sso=Generic,sso=mycw_user,ou=Perm
+ issions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=order,sso=reseller,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: update
+ssoGrant: true
+sso: 17bf0b
+
+# ed309c, Wholesale Access Reseller, Generic, mycw_user, Permissions, SSO, ss
+ o
+dn: sso=ed309c,sso=Wholesale Access Reseller,sso=Generic,sso=mycw_user,ou=Perm
+ issions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=order,sso=reseller,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: read
+ssoGrant: true
+sso: ed309c
+
+# parent, Wholesale Access Reseller, Generic, mycw_user, Permissions, SSO, ss
+ o
+dn: sso=parent,sso=Wholesale Access Reseller,sso=Generic,sso=mycw_user,ou=Perm
+ issions,ou=SSO,dc=sso
+objectClass: ssoAttribute
+ssoValue: Generic:mycw_user
+sso: parent
+
+# description, Wholesale Access Reseller, Generic, mycw_user, Permissions, SS
+ O, sso
+dn: sso=description,sso=Wholesale Access Reseller,sso=Generic,sso=mycw_user,ou
+ =Permissions,ou=SSO,dc=sso
+objectClass: ssoAttribute
+ssoValue: Users that will need to provide and assure Wholesale Access products
+sso: description
+
+# 50b1d7, Wholesale Access Reseller, Generic, mycw_user, Permissions, SSO, ss
+ o
+dn: sso=50b1d7,sso=Wholesale Access Reseller,sso=Generic,sso=mycw_user,ou=Perm
+ issions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=order,sso=reseller,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: delete
+ssoGrant: true
+sso: 50b1d7
+
+# 849410, Wholesale Access Reseller, Generic, mycw_user, Permissions, SSO, ss
+ o
+dn: sso=849410,sso=Wholesale Access Reseller,sso=Generic,sso=mycw_user,ou=Perm
+ issions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=incident,sso=reseller,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: delete
+ssoGrant: true
+sso: 849410
+
+# 515c3a, Wholesale Access Reseller, Generic, mycw_user, Permissions, SSO, ss
+ o
+dn: sso=515c3a,sso=Wholesale Access Reseller,sso=Generic,sso=mycw_user,ou=Perm
+ issions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=incident,sso=reseller,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: update
+ssoGrant: true
+sso: 515c3a
+
+# 56006b, Wholesale Access Reseller, Generic, mycw_user, Permissions, SSO, ss
+ o
+dn: sso=56006b,sso=Wholesale Access Reseller,sso=Generic,sso=mycw_user,ou=Perm
+ issions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=order,sso=reseller,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: create
+ssoGrant: true
+sso: 56006b
+
+# 10e257, Wholesale Access Reseller, Generic, mycw_user, Permissions, SSO, ss
+ o
+dn: sso=10e257,sso=Wholesale Access Reseller,sso=Generic,sso=mycw_user,ou=Perm
+ issions,ou=SSO,dc=sso
+objectClass: ssoRight
+ssoResource: sso=incident,sso=reseller,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: read
+ssoGrant: true
+sso: 10e257
+
+# Company Specific, mycw_user, Permissions, SSO, sso
+dn: sso=Company Specific,sso=mycw_user,ou=Permissions,ou=SSO,dc=sso
+objectClass: ssoRole
+sso: Company Specific
+
+# description, Company Specific, mycw_user, Permissions, SSO, sso
+dn: sso=description,sso=Company Specific,sso=mycw_user,ou=Permissions,ou=SSO,d
+ c=sso
+objectClass: ssoAttribute
+ssoValue: For users that do not fit into any of the roles underneath the "Gene
+ ric" role
+sso: description
+
+# fae3d0, SaaS Admin, Generic, mycw_user, Permissions, SSO, sso
+dn: sso=fae3d0,sso=SaaS Admin,sso=Generic,sso=mycw_user,ou=Permissions,ou=SSO,
+ dc=sso
+objectClass: ssoRight
+ssoResource: sso=saas,sso=admin,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: update
+ssoGrant: true
+sso: fae3d0
+
+# parent, SaaS Admin, Generic, mycw_user, Permissions, SSO, sso
+dn: sso=parent,sso=SaaS Admin,sso=Generic,sso=mycw_user,ou=Permissions,ou=SSO,
+ dc=sso
+objectClass: ssoAttribute
+ssoValue: Generic:mycw_user
+sso: parent
+
+# description, SaaS Admin, Generic, mycw_user, Permissions, SSO, sso
+dn: sso=description,sso=SaaS Admin,sso=Generic,sso=mycw_user,ou=Permissions,ou
+ =SSO,dc=sso
+objectClass: ssoAttribute
+ssoValue: Users that will need to manage SaaS products, view billing informati
+ on and create reports
+sso: description
+
+# ccb65e, SaaS Admin, Generic, mycw_user, Permissions, SSO, sso
+dn: sso=ccb65e,sso=SaaS Admin,sso=Generic,sso=mycw_user,ou=Permissions,ou=SSO,
+ dc=sso
+objectClass: ssoRight
+ssoResource: sso=saas,sso=admin,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: delete
+ssoGrant: true
+sso: ccb65e
+
+# b3a8d0, SaaS Admin, Generic, mycw_user, Permissions, SSO, sso
+dn: sso=b3a8d0,sso=SaaS Admin,sso=Generic,sso=mycw_user,ou=Permissions,ou=SSO,
+ dc=sso
+objectClass: ssoRight
+ssoResource: sso=saas,sso=admin,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: create
+ssoGrant: true
+sso: b3a8d0
+
+# bde59d, SaaS Admin, Generic, mycw_user, Permissions, SSO, sso
+dn: sso=bde59d,sso=SaaS Admin,sso=Generic,sso=mycw_user,ou=Permissions,ou=SSO,
+ dc=sso
+objectClass: ssoRight
+ssoResource: sso=saas,sso=admin,sso=portal,sso=mycw,ou=Resources,ou=SSO
+ssoDescription: read
+ssoGrant: true
+sso: bde59d
+
+# search result
+search: 2
+result: 0 Success
+
+# numResponses: 74
+# numEntries: 73

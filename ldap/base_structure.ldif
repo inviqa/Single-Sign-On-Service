@@ -1,0 +1,23 @@
+dn: ou=SSO,dc=sso
+ou: SSO
+objectClass: organizationalUnit
+
+dn: ou=Users,ou=SSO,dc=sso
+ou: Users
+objectClass: organizationalUnit
+
+dn: ou=Resources,ou=SSO,dc=sso
+ou: Resources
+objectClass: organizationalUnit
+
+dn: ou=Permissions,ou=SSO,dc=sso
+ou: Permissions
+objectClass: organizationalUnit
+
+dn: ou=Sessions,ou=SSO,dc=sso
+ou: Sessions
+objectClass: organizationalUnit
+
+dn: ou=Policies,ou=SSO,dc=sso
+ou: Policies
+objectClass: organizationalUnit

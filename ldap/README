@@ -1,0 +1,36 @@
+Patching and Resetting LDAP
+===========================
+
+base_structure.ldif
+-------------------
+
+Top level LDAP entries for SSO.
+
+test_data.ldif
+--------------
+
+Test data for UAT and development.
+
+reset_ldap.sh
+-------------
+
+Clears out all entries and enter the base structure and entries. Use this to
+drop your LDAP back to a base state, for example deployment or UAT. If you are
+making changes to the base data (eg resources, policies, etc), export the data
+to these files. Be careful to not include any custom data in here.
+
+It looks in the following files for entries (in this order):
+* Policy.ldif
+* Organisation.ldif
+* Users.ldif
+* Resources.ldif
+* Permissions.ldif
+
+patch_ldap.sh
+-------------
+
+Loops through all ldif files that begin with 8 numbers (eg 20090910*.ldif) and
+will ldapadd them in order from earliest to latest. This will be more useful
+after release.
+
+
