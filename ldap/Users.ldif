@@ -6,18 +6,19 @@
 # requesting: ALL
 #
 
-# CW, Users, SSO, sso
-dn: sso=CW,ou=Users,ou=SSO,dc=sso
-sso: CW
+# MyOrg, Users, SSO, sso
+dn: sso=MyOrg,ou=Users,ou=SSO,dc=sso
+sso: MyOrg
 objectClass: ssoOrganisation
 
-# admin@cw, CW, Users, SSO, sso
-dn: sso=admin@cw,sso=CW,ou=Users,ou=SSO,dc=sso
+# admin@myorg, MyOrg, Users, SSO, sso
+# ssoPassword = 'password'
+dn: sso=admin@myorg,sso=MyOrg,ou=Users,ou=SSO,dc=sso
 objectClass: ssoUser
-ssoUsername: admin@cw
+ssoUsername: admin@myorg
 ssoPassword: 5f4dcc3b5aa765d61d8327deb882cf99
 ssoCreated: 1250665314
-sso: admin@cw
+sso: admin@myorg
 
 # search result
 search: 2

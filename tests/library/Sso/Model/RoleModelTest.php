@@ -204,7 +204,7 @@ class Test_RoleModel extends PHPUnit_Framework_TestCase
 		try {
 			$role = Sso_Model_Role::fetch($this->newName, null, null);
 			$result = $role->update(array('right' => array('read', 'read'),
-										'resource' => array('mycw', 'portal:mycw'),
+										'resource' => array('myorg', 'portal:myorg'),
 										'grant' => array('true', 'false')
 			));
 		} catch (Sso_Exception $e) {
@@ -215,7 +215,7 @@ class Test_RoleModel extends PHPUnit_Framework_TestCase
 		try {
 			$role = Sso_Model_Role::fetch($this->newName, null, null);
 			$result = $role->update(array('right' => array('read'),
-										'resource' => array('mycw'),
+										'resource' => array('myorg'),
 										'grant' => array('true')
 			));
 		} catch (Sso_Exception $e) {

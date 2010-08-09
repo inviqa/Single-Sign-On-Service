@@ -119,11 +119,11 @@ class OrganisationController extends Sso_Controller_Action
      * @throws Sso_Exception_NotFound
      */
     public function getAction() {
+    	//$log = Zend_Registry::get('log');
         $this->_requireValidToken();
         $organisation = $this->_request->identifier;
         $order = $this->getRequest()->getParam('order');
         $direction = $this->getRequest()->getParam('direction');
-
 		$org = Sso_Model_Organisation::fetch($organisation, $order, $direction);
 		$link = $this->getRequest()->getParam('link');
         if (!empty($link)) {

@@ -1,1 +1,9 @@
-Coming soon...
+Lasso is a service api that can be used to manage organisations/users/roles and 
+resources using LDAP for data management.
+
+There is also a Lasso Administration interface  available at ?.
+
+See file INSTALLATION for installation and set-up instructions.
+
+Further information, api documentation and tutorials are available at the 
+project github pages.

@@ -4,7 +4,7 @@ require_once('PHPUnit/Framework.php');
 
 class Test_TokenModel extends PHPUnit_Framework_TestCase
 {
-	public $username = 'admin@cw';
+	public $username = 'admin@myorg';
 	public $password = 'password';
 
 	public function setUp() {

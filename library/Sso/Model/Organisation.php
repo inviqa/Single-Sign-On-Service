@@ -22,9 +22,13 @@ class Sso_Model_Organisation extends Sso_Model_Base
      * @throws Sso_Exception_NotFound
      */
     public static function fetch($id = null, $order = null, $direction = null) {
+    	$log = Zend_Registry::get('log');
+    	$log->info("in organisation fetch");
         $connection = Sso_Model_Base::getConnection();
+        $log->info("in organisation fetch - got connection");
         if ($id) {
             // fetch this specific record
+            $log->info("in organisation fetch - in if");
             $entry = $connection->getBase()->find(self::getDnFromId($id));
             if (!($entry instanceOf Sso_Ldap_Entry)) {
                 throw new Sso_Exception_NotFound('Unknown Organisation "'.$id.'"');
@@ -36,8 +40,11 @@ class Sso_Model_Organisation extends Sso_Model_Base
             }
         } else {
             // root org node
+            $log->info("in organisation fetch - in else");
             $top = $connection->getBase()->find('ou=Users,ou=SSO');
+            $log->info("in organisation fetch - got top");
             $retval = Sso_Model_Organisation::getOrgChildrenFromLdapEntry($top, $order, $direction);
+        $log->info("in organisation fetch - got children");
         }
         return $retval;
     }
@@ -55,6 +62,8 @@ class Sso_Model_Organisation extends Sso_Model_Base
      */
     public static function getOrgChildrenFromLdapEntry(Sso_Ldap_Entry $entry, $order, $direction) {
         // handle sort vars
+        $log = Zend_Registry::get('log');
+        $log->info("In getOrgChildrenFromLdapEntry");
         $order = 'sso'; // only one option!
 
         if(strtolower($direction) == 'desc') {
@@ -62,15 +71,16 @@ class Sso_Model_Organisation extends Sso_Model_Base
         } else {
             $direction = 'asc';
         }
-
+$log->info("In getOrgChildrenFromLdapEntry - about to get children");
         $list = $entry->getChildren()->includeFilter(array("objectClass" => "ssoOrganisation"))->sort(array($order => $direction));
-;
+$log->info("In getOrgChildrenFromLdapEntry - got children");
         $retval = array();
         if ($list) {
             foreach ($list as $e) {
                 $retval[] = Sso_Model_Organisation::getOrgFromEntry($e);
             }
         }
+        $log->info("In getOrgChildrenFromLdapEntry about to return");
         return $retval;
     }
 

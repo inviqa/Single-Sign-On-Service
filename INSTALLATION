@@ -1,0 +1,252 @@
+Lasso Setup
+
+
+FTP/unzip Lasso Service and Lasso Admin files  into the appropriate directories
+on the server.  These instructions assume they are at /var/www/sso_service and 
+/var/www/sso_admin, you will need to adjust the virtual host configuration and 
+paths in the following instructions if elsewhere. These instructions assume they
+are installed on the same host but that is not necessary.  They also assume that 
+both are being installed, however the Lasso service stands alone, the Lasso 
+Administration Interface is an optional extra.
+
+REQUIREMENTS
+
+In short to run the Lasso Service you need a webserver with OpenLdap, SqLite, PHP5
+and Memcached and Zend Framework.
+
+The PHP5 needs to have the following enabled: ldap, SqLite, Curl, Memcache
+
+These instructions are for installing on Ubuntu (9.10) with apache2 and will
+need to be adapted for other environments.
+
+If not already installed you need the following packages.
+
+
+libldap-2.4.2
+slapd
+ldap-utils
+libsasl2-modules-ldap
+php5-ldap
+memcached
+php5-memcache
+sqlite
+php5-sqlite
+php5-curl
+
+OpenLdap is available from http://staff.osuosl.org/~jeff/openldap/el5/i386/ 
+(or http://staff.osuosl.org/~jeff/openldap/el5/x86_64/ for 64bit)
+
+LDAP SETUP
+
+If installed remove
+rm openldap-servers-sql-2.4.11-*
+remove open ldap server overlays if required 
+
+Add to /etc/hosts.allow
+slapd:          127.0.0.1
+
+This setup uses a slapd.conf configuration file.  However this is no longer the default 
+option in Ubuntu 8.10 onwards so it needs to be enabled.
+
+In file /etc/default/slapd set variable SLAPD_CONF to the path of the config file:
+
+SLAPD_CONF=/etc/ldap/slapd.conf
+
+Copy the supplied config file to this location:
+
+sudo cp /var/www/sso_service/ldap/slapd.conf /etc/ldap/slapd.conf
+
+edit the slapd.conf
+
+Comment out the TLS items at the bottom.  Add these two lines:
+
+rootdn    "cn=admin,dc=sso"
+rootpw 2KZVyVdkmyNPBWTrrW+L5s1+zT/FCG/c
+
+The password hash used should be created with slappasswd  and be the password you want to use for ldap administration.  
+It will need to be used later so don't lose it!
+
+cp /var/www/sso_service/ldap/sso.schema /etc/ldap/schema/
+
+create directory /etc/ldap/slapd.d
+
+Check the configuration file with slaptest
+slaptest -f slapd.conf -F slapd.d
+
+Change directory slapd.d ownership to user and group openldap
+chown -R openldap:openldap slapd.d
+
+Start ldap with
+/etc/init.d/ldap start
+
+
+Put the following into a file eg. sso.ldif
+
+# sso
+dn: dc=sso
+objectClass: top
+objectClass: dcObject
+objectClass: organization
+o: sso
+dc: sso
+
+# admin, sso
+dn: cn=admin,dc=sso
+objectClass: simpleSecurityObject
+objectClass: organizationalRole
+cn: admin
+description: LDAP administrator
+userPassword:: 2KZVyVdkmyNPBWTrrW+L5s1+zT/FCG/c
+
+The password should be the same as the one in the ldap config file
+
+run ldapadd -x -w yourpassword -D cn=admin,dc=sso -f sso.ldif
+
+Remove the two lines form the slapd.conf for rootdn and pass
+
+Start the ldap service
+/etc/init.d/ldap start
+
+run ldapsearch -x -b "dc=sso"- you should see
+
+      # extended LDIF
+      #
+      # LDAPv3
+      # base <dc=sso> (default) with scope subtree
+      # filter: (objectclass=*)
+      # requesting: ALL
+      #
+
+      # sso
+      dn: dc=sso
+      objectClass: top
+      objectClass: dcObject
+      objectClass: organization
+      o: sso
+      dc: sso
+
+      # admin, sso
+      dn: cn=admin,dc=sso
+      objectClass: simpleSecurityObject
+      objectClass: organizationalRole
+      cn: admin
+      description: LDAP administrator
+      userPassword:: e1NTSEF9MktaVnlWZGtteU5QQldUcnJXK0w1czErelQvRkNHL2M=
+
+      # search result
+      search: 2
+      result: 0 Success
+
+      # numResponses: 3
+      # numEntries: 2
+
+MEMCACHED
+
+Installing the packages is most of the work however it is disabled by default.  So edit file
+/etc/default/memcached and set ENABLE_MEMCACHED=yes. Then start the service
+sudo /etc/init.d/memcached start
+
+ZEND FRAMEWORK
+
+See http://framework.zend.com/manual/en/introduction.installation.html for download and 
+installation instruction.  Both sso service and sso admin use Zend Framework(1.8 or later) 
+so we suggest it is installed in a common location under the PHP include path eg. usr/share
+
+
+VIRTUAL HOST SET UP
+
+Separate virtual hosts are needed for the service and admin.  
+
+Uncomment the NameVirtualHost? *:80 line in /etc/httpd/conf/httpd.conf
+
+Create files sso_service and sso_admin in /etc/apache2/sites-available using the following descriptions.
+NB. APPLICATION_ENV needs to be one of production | staging | development | testing and will determine which
+section of the config file /application/configs/application.ini in each site will be used by the application.
+
+ssoservice.localhost and sso_admin.local will need to be added to the hosts file (/etc/hosts).
+
+127.0.0.1       sso_service.local
+127.0.0.1       ssoservice.localhost
+127.0.0.1       sso_admin.local
+
+<VirtualHost *:80>
+        ServerAdmin webmaster@localhost
+        ServerName sso_service
+        ServerAlias ssoservice.localhost
+        SetEnv APPLICATION_ENV testing
+
+        DocumentRoot /var/www/sso_service/public/
+        <Directory />
+                Options FollowSymLinks
+                AllowOverride None
+        </Directory>
+        <Directory /var/www/sso_service/public/>
+                Options Indexes FollowSymLinks MultiViews
+                AllowOverride All
+                Order allow,deny
+                allow from all
+        </Directory>
+
+        ErrorLog /var/log/httpd/sso_service.error.log
+
+        # Possible values include: debug, info, notice, warn, error, crit,
+        # alert, emerg.
+        LogLevel warn
+
+        CustomLog /var/log/httpd/sso_service.access.log combined
+</VirtualHost>
+vi /etc/httpd/conf.d/sso_admin.conf
+
+<VirtualHost *:80>
+        ServerAdmin webmaster@localhost
+        ServerName sso_admin
+        ServerAlias sso_admin.local
+        SetEnv APPLICATION_ENV testing
+
+        DocumentRoot /var/www/sso_admin/public/
+        <Directory />
+                Options FollowSymLinks
+                AllowOverride None
+        </Directory>
+        <Directory /var/www/sso_admin/public/>
+                Options Indexes FollowSymLinks MultiViews
+                AllowOverride All
+                Order allow,deny
+                allow from all
+        </Directory>
+
+        ErrorLog /var/log/httpd/sso_admin.test-error.log
+
+        # Possible values include: debug, info, notice, warn, error, crit,
+        # alert, emerg.
+        LogLevel warn
+
+        CustomLog /var/log/httpd/sso_admin.test-access.log combined
+</VirtualHost>
+
+The sites are then enabled using
+
+a2ensite sso_service (or name of your virtual host file in sites-available)
+a2ensite sso_admin
+
+Then restart apache
+sudo apache2ctl restart 
+
+SETTING UP ORGANISATION IN LDAP AND APPLICATION CONFIGURATION 
+
+Before being able to use the service and admin some basic setting up needs to be done in ldap.  
+In the service files /ldap there are several ldif files.  Edit the Users.ldif with the name 
+of your organisation for the admin interface instead of 'MyOrg' and the username and password (md5 hash of pasword) 
+of the administrator.
+
+The same organisation name needs to be put in sso_admin/applications/configs/application.ini 
+sso.adminOrganisation = "MyOrg"
+
+Then run ldapadd on  basic_structure.ldif and Users.ldif as described above.  You may also want to adapt and use other ldif files
+in the application ldap directory.
+
+Each application has an application.ini file which are standard Zend Framework Configuration files. 
+The variables in these will need to be changed to match your environment and organisation.
+
+You should now be ready to fire up http://youradminsite/ in a browser and log in with the admin user in
+your Users.ldif file and then see a page showing the existing organisation(s).

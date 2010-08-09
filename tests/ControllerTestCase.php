@@ -18,7 +18,7 @@ abstract class ControllerTestCase extends Zend_Test_PHPUnit_ControllerTestCase
 	/**
 	 * @var string valid authentication username
 	 */
-	public $username = 'admin@cw';
+	public $username = 'admin@myorg';
 
 	/**
 	 * @var string valid authentication password
