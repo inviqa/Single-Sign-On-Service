@@ -262,8 +262,8 @@ class UserManager {
 	private $rightsTree;
 	private $rightsToRoles;
 	private $mapping = array(
-		"sso=incident,sso=reseller,sso=portal,sso=mycw,ou=Resources,ou=SSO" => "sso=incident,sso=enterprise,sso=portal,sso=mycw,ou=Resources,ou=SSO",
-		"sso=incident,sso=portal,sso=mycw,ou=Resources,ou=SSO" => "sso=incident,sso=enterprise,sso=portal,sso=mycw,ou=Resources,ou=SSO",
+		"sso=incident,sso=reseller,sso=portal,sso=myorg,ou=Resources,ou=SSO" => "sso=incident,sso=enterprise,sso=portal,sso=myorg,ou=Resources,ou=SSO",
+		"sso=incident,sso=portal,sso=myorg,ou=Resources,ou=SSO" => "sso=incident,sso=enterprise,sso=portal,sso=myorg,ou=Resources,ou=SSO",
 	);
 	
 	public function __construct($perms) {
